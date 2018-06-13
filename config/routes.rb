@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :hospitals
   get 'procedures/create'
   get 'procedures/new'
   get 'procedures/show'

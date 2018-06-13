@@ -5,11 +5,11 @@ one:
   address: MyString
   city: MyString
   state: MyString
-  phone: MyString
+  phone_number: MyString
 
 two:
   name: MyString
   address: MyString
   city: MyString
   state: MyString
-  phone: MyString
+  phone_number: MyString
