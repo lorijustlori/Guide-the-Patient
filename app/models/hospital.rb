@@ -1,9 +1,9 @@
 class Hospital < ApplicationRecord
 	has_many :physicians
 
-	validates :name, presense: true 
+	validates :name, presence: true 
 					 :null => false
-	validates :address, uniqueness: { scope: :state }
+	validates :address, uniqueness: { scope: :city, :state }
 end
 
 
