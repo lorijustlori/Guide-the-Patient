@@ -1,0 +1,289 @@
+code,description
+M50.22,Other cervical disc displacement - mid-cervical region
+M50.23,Other cervical disc displacement - cervicothoracic region
+M50.30,Other cervical disc degeneration - unspecified cervical region
+M50.31,Other cervical disc degeneration - occipito-atlanto-axial region
+M50.32,Other cervical disc degeneration - mid-cervical region
+M50.33,Other cervical disc degeneration - cervicothoracic region
+M50.80,Other cervical disc disorders - unspecified cervical region
+M50.81,Other cervical disc disorders - occipito-atlanto-axial region
+M50.82,Other cervical disc disorders - mid-cervical region
+M50.83,Other cervical disc disorders - cervicothoracic region
+M50.90,Cervical disc disorder - unspecified - unspecified cervical region
+M50.91,Cervical disc disorder - unspecified - occipito-atlanto-axial region
+M50.92,Cervical disc disorder - unspecified - mid-cervical region
+M50.93,Cervical disc disorder - unspecified - cervicothoracic region
+M54.2,Cervicalgia 
+M54.30,Sciatica - unspecified side
+M54.31,Sciatica - right side
+M54.32,Sciatica - left side
+M54.40,Lumbago with sciatica - unspecified side
+M54.41,Lumbago with sciatica - right side
+M54.42,Lumbago with sciatica - left side
+M54.5,Low back pain 
+M54.6,Pain in thoracic spine 
+M54.89,Other dorsalgia 
+M54.9,Dorsalgia - unspecified
+M16.0,Bilateral primary osteoarthritis of hip 
+M16.10,Unilateral primary osteoarthritis - unspecified hip
+M16.11,Unilateral primary osteoarthritis - right hip
+M16.12,Unilateral primary osteoarthritis - left hip
+M16.2,Bilateral osteoarthritis resulting from hip dysplasia 
+M16.30,Unilateral osteoarthritis resulting from hip dysplasia - unspecified hip
+M16.31,Unilateral osteoarthritis resulting from hip dysplasia - right hip
+M16.32,Unilateral osteoarthritis resulting from hip dysplasia - left hip
+M16.4,Bilateral post-traumatic osteoarthritis of hip 
+M16.50,Unilateral post-traumatic osteoarthritis - unspecified hip
+M16.51,Unilateral post-traumatic osteoarthritis - right hip
+M16.52,Unilateral post-traumatic osteoarthritis - left hip
+M16.6,Other bilateral secondary osteoarthritis of hip 
+M16.7,Other unilateral secondary osteoarthritis of hip 
+M16.9,Osteoarthritis of hip - unspecified
+M17.0,Bilateral primary osteoarthritis of knee 
+M17.10,Unilateral primary osteoarthritis - unspecified knee
+M17.11,Unilateral primary osteoarthritis - right knee
+M17.12,Unilateral primary osteoarthritis - left knee
+M17.2,Bilateral post-traumatic osteoarthritis of knee
+M17.30,Unilateral post-traumatic osteoarthritis - unspecified knee
+M17.31,Unilateral post-traumatic osteoarthritis - right knee
+M17.32,Unilateral post-traumatic osteoarthritis - left knee
+M17.4,Other bilateral secondary osteoarthritis of knee 
+M17.5,Other unilateral secondary osteoarthritis of knee 
+M17.9,Osteoarthritis of knee - unspecified
+M54.10,Radiculopathy - site unspecified
+M54.11,Radiculopathy - occipito-atlanto-axial region
+M54.12,Radiculopathy - cervical region
+M54.13,Radiculopathy - cervicothoracic region
+M54.14,Radiculopathy - thoracic region
+M54.15,Radiculopathy - thoracolumbar region
+M54.16,Radiculopathy - lumbar region
+M54.17,Radiculopathy - lumbosacral region
+M54.18,Radiculopathy - sacral and sacrococcygeal region
+M54.30,Sciatica - unspecified side
+M54.31,Sciatica - right side
+M54.32,Sciatica - left side
+M05.611,Rheumatoid arthritis of right shoulder with involvement of other organs and systems 
+M05.612,Rheumatoid arthritis of left shoulder with involvement of other organs and systems 
+M05.619,Rheumatoid arthritis of unspecified shoulder with involvement of other organs and systems 
+M05.621,Rheumatoid arthritis of right elbow with involvement of other organs and systems 
+M05.622,Rheumatoid arthritis of left elbow with involvement of other organs and systems 
+M05.629,Rheumatoid arthritis of unspecified elbow with involvement of other organs and systems 
+M05.631,Rheumatoid arthritis of right wrist with involvement of other organs and systems 
+M05.632,Rheumatoid arthritis of left wrist with involvement of other organs and systems 
+M05.639,Rheumatoid arthritis of unspecified wrist with involvement of other organs and systems 
+M05.641,Rheumatoid arthritis of right hand with involvement of other organs and systems 
+M05.642,Rheumatoid arthritis of left hand with involvement of other organs and systems 
+M05.649,Rheumatoid arthritis of unspecified hand with involvement of other organs and systems 
+M05.651,Rheumatoid arthritis of right hip with involvement of other organs and systems 
+M05.652,Rheumatoid arthritis of left hip with involvement of other organs and systems 
+M05.659,Rheumatoid arthritis of unspecified hip with involvement of other organs and systems 
+M05.661,Rheumatoid arthritis of right knee with involvement of other organs and systems 
+M05.662,Rheumatoid arthritis of left knee with involvement of other organs and systems 
+M05.669,Rheumatoid arthritis of unspecified knee with involvement of other organs and systems 
+M05.671,Rheumatoid arthritis of right ankle and foot with involvement of other organs and systems 
+M05.672,Rheumatoid arthritis of left ankle and foot with involvement of other organs and systems 
+M05.679,Rheumatoid arthritis of unspecified ankle and foot with involvement of other organs and systems
+M05.69,Rheumatoid arthritis of multiple sites with involvement of other organs and systems 
+M05.711,Rheumatoid arthritis with rheumatoid factor of right shoulder without organ or systems involvement 
+M05.712,Rheumatoid arthritis with rheumatoid factor of left shoulder without organ or systems involvement 
+M05.719,Rheumatoid arthritis with rheumatoid factor of unspecified shoulder without organ or systems involvement 
+M05.721,Rheumatoid arthritis with rheumatoid factor of right elbow without organ or systems involvement 
+M05.722,Rheumatoid arthritis with rheumatoid factor of left elbow without organ or systems involvement 
+M05.729,Rheumatoid arthritis with rheumatoid factor of unspecified elbow without organ or systems involvement 
+M05.731,Rheumatoid arthritis with rheumatoid factor of right wrist without organ or systems involvement 
+M05.732,Rheumatoid arthritis with rheumatoid factor of left wrist without organ or systems involvement 
+M05.739,Rheumatoid arthritis with rheumatoid factor of unspecified wrist without organ or systems involvement 
+M05.741,Rheumatoid arthritis with rheumatoid factor of right hand without organ or systems involvement 
+M05.742,Rheumatoid arthritis with rheumatoid factor of left hand without organ or systems involvement 
+M05.749,Rheumatoid arthritis with rheumatoid factor of unspecified hand without organ or systems involvement 
+M05.751,Rheumatoid arthritis with rheumatoid factor of right hip without organ or systems involvement 
+M05.752,Rheumatoid arthritis with rheumatoid factor of left hip without organ or systems involvement 
+M05.759,Rheumatoid arthritis with rheumatoid factor of unspecified hip without organ or systems involvement 
+M05.761,Rheumatoid arthritis with rheumatoid factor of right knee without organ or systems involvement 
+M05.762,Rheumatoid arthritis with rheumatoid factor of left knee without organ or systems involvement 
+M05.769,Rheumatoid arthritis with rheumatoid factor of unspecified knee without organ or systems involvement 
+M05.771,Rheumatoid arthritis with rheumatoid factor of right ankle and foot without organ or systems involvement 
+M05.772,Rheumatoid arthritis with rheumatoid factor of left ankle and foot without organ or systems involvement 
+M05.779,Rheumatoid arthritis with rheumatoid factor of unspecified ankle and foot without organ or systems involvement 
+M05.79,Rheumatoid arthritis with rheumatoid factor of multiple sites without organ or systems involvement 
+M05.811,Other rheumatoid arthritis with rheumatoid factor of right shoulder 
+M05.812,Other rheumatoid arthritis with rheumatoid factor of left shoulder 
+M05.819,Other rheumatoid arthritis with rheumatoid factor of unspecified shoulder 
+M05.821,Other rheumatoid arthritis with rheumatoid factor of right elbow 
+M05.822,Other rheumatoid arthritis with rheumatoid factor of left elbow 
+M05.829,Other rheumatoid arthritis with rheumatoid factor of unspecified elbow 
+M05.831,Other rheumatoid arthritis with rheumatoid factor of right wrist 
+M05.832,Other rheumatoid arthritis with rheumatoid factor of left wrist 
+M05.839,Other rheumatoid arthritis with rheumatoid factor of unspecified wrist 
+M05.841,Other rheumatoid arthritis with rheumatoid factor of right hand 
+M05.842,Other rheumatoid arthritis with rheumatoid factor of left hand 
+M05.849,Other rheumatoid arthritis with rheumatoid factor of unspecified hand 
+M05.851,Other rheumatoid arthritis with rheumatoid factor of right hip 
+M05.852,Other rheumatoid arthritis with rheumatoid factor of left hip 
+M05.859,Other rheumatoid arthritis with rheumatoid factor of unspecified hip 
+M05.861,Other rheumatoid arthritis with rheumatoid factor of right knee 
+M05.862,Other rheumatoid arthritis with rheumatoid factor of left knee 
+M05.869,Other rheumatoid arthritis with rheumatoid factor of unspecified knee 
+M05.871,Other rheumatoid arthritis with rheumatoid factor of right ankle and foot 
+M05.872,Other rheumatoid arthritis with rheumatoid factor of left ankle and foot 
+M05.879,Other rheumatoid arthritis with rheumatoid factor of unspecified ankle and foot 
+M05.89,Other rheumatoid arthritis with rheumatoid factor of multiple sites 
+M05.9,Rheumatoid arthritis with rheumatoid factor - unspecified
+M06.00,Rheumatoid arthritis without rheumatoid factor - unspecified site
+M06.011,Rheumatoid arthritis without rheumatoid factor - right shoulder
+M06.012,Rheumatoid arthritis without rheumatoid factor - left shoulder
+M06.019,Rheumatoid arthritis without rheumatoid factor - unspecified shoulder
+M06.021,Rheumatoid arthritis without rheumatoid factor - right elbow
+M06.022,Rheumatoid arthritis without rheumatoid factor - left elbow
+M06.029,Rheumatoid arthritis without rheumatoid factor - unspecified elbow
+M06.031,Rheumatoid arthritis without rheumatoid factor - right wrist
+M06.032,Rheumatoid arthritis without rheumatoid factor - left wrist
+M06.039,Rheumatoid arthritis without rheumatoid factor - unspecified wrist
+M06.041,Rheumatoid arthritis without rheumatoid factor - right hand
+M06.042,Rheumatoid arthritis without rheumatoid factor - left hand
+M06.049,Rheumatoid arthritis without rheumatoid factor - unspecified hand
+M06.051,Rheumatoid arthritis without rheumatoid factor - right hip
+M06.052,Rheumatoid arthritis without rheumatoid factor - left hip
+M06.059,Rheumatoid arthritis without rheumatoid factor - unspecified hip
+M06.061,Rheumatoid arthritis without rheumatoid factor - right knee
+M06.062,Rheumatoid arthritis without rheumatoid factor - left knee
+M06.069,Rheumatoid arthritis without rheumatoid factor - unspecified knee
+M06.071,Rheumatoid arthritis without rheumatoid factor - right ankle and foot
+M06.072,Rheumatoid arthritis without rheumatoid factor - left ankle and foot
+M06.079,Rheumatoid arthritis without rheumatoid factor - unspecified ankle and foot
+M06.08,Rheumatoid arthritis without rheumatoid factor - vertebrae
+M06.09,Rheumatoid arthritis without rheumatoid factor - multiple sites
+M06.80,Other specified rheumatoid arthritis - unspecified site
+M06.811,Other specified rheumatoid arthritis - right shoulder
+M06.812,Other specified rheumatoid arthritis - left shoulder
+M06.819,Other specified rheumatoid arthritis - unspecified shoulder
+M06.821,Other specified rheumatoid arthritis - right elbow
+M06.822,Other specified rheumatoid arthritis - left elbow
+M06.829,Other specified rheumatoid arthritis - unspecified elbow
+M06.831,Other specified rheumatoid arthritis - right wrist
+M06.832,Other specified rheumatoid arthritis - left wrist
+M06.839,Other specified rheumatoid arthritis - unspecified wrist
+M66.211,Spontaneous rupture of extensor tendons - right shoulder
+M66.212,Spontaneous rupture of extensor tendons - left shoulder
+M66.219,Spontaneous rupture of extensor tendons - unspecified shoulder
+M66.811,Spontaneous rupture of other tendons - right shoulder
+M66.812,Spontaneous rupture of other tendons - left shoulder
+M66.819,Spontaneous rupture of other tendons - unspecified shoulder
+M75.00,Adhesive capsulitis of unspecified shoulder 
+M75.01,Adhesive capsulitis of right shoulder 
+M75.02,Adhesive capsulitis of left shoulder 
+M75.100,Unspecified rotator cuff tear or rupture of unspecified shoulder - not specified as traumatic
+M75.101,Unspecified rotator cuff tear or rupture of right shoulder - not specified as traumatic
+M75.102,Unspecified rotator cuff tear or rupture of left shoulder - not specified as traumatic
+M75.110,Incomplete rotator cuff tear or rupture of unspecified shoulder - not specified as traumatic
+M75.111,Incomplete rotator cuff tear or rupture of right shoulder - not specified as traumatic
+M75.112,Incomplete rotator cuff tear or rupture of left shoulder - not specified as traumatic
+M75.120,Complete rotator cuff tear or rupture of unspecified shoulder - not specified as traumatic
+M75.121,Complete rotator cuff tear or rupture of right shoulder - not specified as traumatic
+M75.122,Complete rotator cuff tear or rupture of left shoulder - not specified as traumatic
+M75.20,Bicipital tendinitis - unspecified shoulder
+M75.21,Bicipital tendinitis - right shoulder
+M75.22,Bicipital tendinitis - left shoulder
+M75.30,Calcific tendinitis of unspecified shoulder 
+M75.31,Calcific tendinitis of right shoulder 
+M75.32,Calcific tendinitis of left shoulder 
+M75.40,Impingement syndrome of unspecified shoulder 
+M75.41,Impingement syndrome of right shoulder 
+M75.42,Impingement syndrome of left shoulder 
+M75.50,Bursitis of unspecified shoulder 
+M75.51,Bursitis of right shoulder 
+M75.52,Bursitis of left shoulder 
+M75.80,Other shoulder lesions - unspecified shoulder
+M75.81,Other shoulder lesions - right shoulder
+M75.82,Other shoulder lesions - left shoulder
+M75.90,Shoulder lesion - unspecified - unspecified shoulder
+M75.91,Shoulder lesion - unspecified - right shoulder
+M75.92,Shoulder lesion - unspecified - left shoulder
+M48.06,Spinal stenosis - lumbar region
+M48.07,Spinal stenosis - lumbosacral region
+M99.23,Subluxation stenosis of neural canal of lumbar region 
+M99.33,Osseous stenosis of neural canal of lumbar region 
+M99.43,Connective tissue stenosis of neural canal of lumbar region 
+M99.53,Intervertebral disc stenosis of neural canal of lumbar region 
+M99.63,Osseous and subluxation stenosis of intervertebral foramina of lumbar region 
+M99.73,Connective tissue and disc stenosis of intervertebral foramina of lumbar region 
+S43.421,Sprain of right rotator cuff capsule - initial encounter
+S43.421D,Sprain of right rotator cuff capsule - subsequent encounter
+S43.421S,Sprain of right rotator cuff capsule - sequela
+S43.422,Sprain of left rotator cuff capsule - initial encounter
+S43.422D,Sprain of left rotator cuff capsule - subsequent encounter
+S43.422S,Sprain of left rotator cuff capsule - sequela
+S43.429A,Sprain of unspecified rotator cuff capsule - initial encounter
+S43.429D,Sprain of unspecified rotator cuff capsule - subsequent encounter
+S43.429S,Sprain of unspecified rotator cuff capsule - sequela
+S83.501A,Sprain of unspecified cruciate ligament of right knee - initial encounter
+S83.501D,Sprain of unspecified cruciate ligament of right knee - subsequent encounter
+S83.501S,Sprain of unspecified cruciate ligament of right knee - sequela
+S83.502A,Sprain of unspecified cruciate ligament of left knee - initial encounter
+S83.502D,Sprain of unspecified cruciate ligament of left knee - subsequent encounter
+S83.502S,Sprain of unspecified cruciate ligament of left knee - sequela
+S83.509A,Sprain of unspecified cruciate ligament of unspecified knee - initial encounter
+S83.509D,Sprain of unspecified cruciate ligament of unspecified knee - subsequent encounter
+S83.509S,Sprain of unspecified cruciate ligament of unspecified knee - sequela
+S83.511A,Sprain of anterior cruciate ligament of right knee - initial encounter
+S83.511D,Sprain of anterior cruciate ligament of right knee - subsequent encounter
+S83.511S,Sprain of anterior cruciate ligament of right knee - sequela
+S83.512A,Sprain of anterior cruciate ligament of left knee - initial encounter
+S83.512D,Sprain of anterior cruciate ligament of left knee - subsequent encounter
+S83.512S,Sprain of anterior cruciate ligament of left knee - sequela
+S83.519A,Sprain of anterior cruciate ligament of unspecified knee - initial encounter
+S83.519D,Sprain of anterior cruciate ligament of unspecified knee - subsequent encounter
+S83.519S,Sprain of anterior cruciate ligament of unspecified knee - sequela
+S83.521,Sprain of posterior cruciate ligament of right knee - initial encounter
+S83.521D,Sprain of posterior cruciate ligament of right knee - subsequent encounter 
+S83.521S,Sprain of posterior cruciate ligament of right knee - sequela
+S83.522A,Sprain of posterior cruciate ligament of left knee - initial encounter
+S83.522D,Sprain of posterior cruciate ligament of left knee - subsequent encounter
+S83.522S,Sprain of posterior cruciate ligament of left knee - sequela
+S83.529A,Sprain of posterior cruciate ligament of unspecified knee - initial encounter
+S83.529D,Sprain of posterior cruciate ligament of unspecified knee - subsequent encounter
+S83.529S,Sprain of posterior cruciate ligament of unspecified knee - sequela
+S93.401A,Sprain of unspecified ligament of right ankle - initial encounter
+S93.401D,Sprain of unspecified ligament of right ankle - subsequent encounter
+S93.401S,Sprain of unspecified ligament of right ankle - sequela
+S93.402A,Sprain of unspecified ligament of left ankle - initial encounter
+S93.402D,Sprain of unspecified ligament of left ankle - subsequent encounter
+S93.402S,Sprain of unspecified ligament of left ankle - sequela
+S93.409A,Sprain of unspecified ligament of unspecified ankle - initial encounter
+S93.409D,Sprain of unspecified ligament of unspecified ankle - subsequent encounter
+S93.409S,Sprain of unspecified ligament of unspecified ankle - sequela
+S93.411A,Sprain of calcaneofibular ligament of right ankle - initial encounter
+S93.411D,Sprain of calcaneofibular ligament of right ankle - subsequent encounter
+S93.411S,Sprain of calcaneofibular ligament of right ankle - sequela
+S93.412A,Sprain of calcaneofibular ligament of left ankle - initial encounter
+S93.412D,Sprain of calcaneofibular ligament of left ankle - subsequent encounter
+S93.412S,Sprain of calcaneofibular ligament of left ankle - sequela
+S93.419A,Sprain of calcaneofibular ligament of unspecified ankle - initial encounter
+S93.419D,Sprain of calcaneofibular ligament of unspecified ankle - subsequent encounter
+S93.419S,Sprain of calcaneofibular ligament of unspecified ankle - sequela
+S93.421,Sprain of deltoid ligament of right ankle - initial encounter
+S93.421D,Sprain of deltoid ligament of right ankle - subsequent encounter
+S93.421S,Sprain of deltoid ligament of right ankle - sequela
+S93.422D,Sprain of deltoid ligament of left ankle - subsequent encounter
+S93.422S,Sprain of deltoid ligament of left ankle - sequela
+S93.429A,Sprain of deltoid ligament of unspecified ankle - initial encounter
+S93.429D,Sprain of deltoid ligament of unspecified ankle - subsequent encounter
+S93.429S,Sprain of deltoid ligament of unspecified ankle - sequela
+S93.431A,Sprain of tibiofibular ligament of right ankle - initial encounter
+S93.431D,Sprain of tibiofibular ligament of right ankle - subsequent encounter
+S93.431S,Sprain of tibiofibular ligament of right ankle - sequela
+S93.432A,Sprain of tibiofibular ligament of left ankle - initial encounter
+S93.432D,Sprain of tibiofibular ligament of left ankle - subsequent encounter
+S93.432S,Sprain of tibiofibular ligament of left ankle - sequela
+S93.439A,Sprain of tibiofibular ligament of unspecified ankle - initial encounter
+S93.439D,Sprain of tibiofibular ligament of unspecified ankle - subsequent encounter
+S93.439S,Sprain of tibiofibular ligament of unspecified ankle - sequela
+S93.491A,Sprain of other ligament of right ankle - initial encounter
+S93.491D,Sprain of other ligament of right ankle - subsequent encounter
+S93.491S,Sprain of other ligament of right ankle - sequela
+S93.492A,Sprain of other ligament of left ankle - initial encounter
+S93.492D,Sprain of other ligament of left ankle - subsequent encounter
+S93.492S,Sprain of other ligament of left ankle - sequela
+S93.499A,Sprain of other ligament of unspecified ankle - initial encounter
+S93.499D,Sprain of other ligament of unspecified ankle - subsequent encounter
+S93.499S,Sprain of other ligament of unspecified ankle - sequela

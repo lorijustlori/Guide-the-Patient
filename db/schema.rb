@@ -13,47 +13,53 @@
 ActiveRecord::Schema.define(version: 2018_06_13_181405) do
 
   create_table "ailments", force: :cascade do |t|
-    t.string "code"
-    t.string "description"
+    t.string "code", null: false
+    t.string "description", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["code"], name: "index_ailments_on_code", unique: true
+    t.index ["description"], name: "index_ailments_on_description", unique: true
   end
 
   create_table "hospitals", force: :cascade do |t|
-    t.string "name"
-    t.string "address"
-    t.string "city"
-    t.string "state"
-    t.string "phone"
+    t.string "name", null: false
+    t.string "address", null: false
+    t.string "city", null: false
+    t.string "state", null: false
+    t.string "phone", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "patients", force: :cascade do |t|
-    t.string "medical_record_number"
-    t.string "first_name"
-    t.string "last_name"
-    t.string "address"
-    t.string "city"
-    t.string "state"
-    t.string "phone"
-    t.string "email"
+    t.string "medical_record_number", null: false
+    t.string "first_name", null: false
+    t.string "last_name", null: false
+    t.string "address", null: false
+    t.string "city", null: false
+    t.string "state", null: false
+    t.string "phone", null: false
+    t.string "email", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["email"], name: "index_patients_on_email", unique: true
+    t.index ["medical_record_number"], name: "index_patients_on_medical_record_number", unique: true
   end
 
   create_table "physicians", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
+    t.string "first_name", null: false
+    t.string "last_name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "remedies", force: :cascade do |t|
-    t.string "code"
-    t.string "description"
+    t.string "code", null: false
+    t.string "description", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["code"], name: "index_remedies_on_code", unique: true
+    t.index ["description"], name: "index_remedies_on_description", unique: true
   end
 
 end
