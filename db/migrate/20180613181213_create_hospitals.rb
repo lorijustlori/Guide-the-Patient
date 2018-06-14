@@ -1,11 +1,11 @@
 class CreateHospitals < ActiveRecord::Migration[5.2]
   def change
     create_table :hospitals do |t|
-      t.string :name
-      t.string :address
-      t.string :city
-      t.string :state
-      t.string :phone
+      t.string :name, null: false
+      t.string :address, null: false
+      t.string :city, null: false
+      t.string :state, null: false
+      t.string :phone, null: false
 
       t.timestamps
     end
