@@ -3,7 +3,7 @@ class Hospital < ApplicationRecord
 
 	validates :name, presence: true 
 					 :null => false
-	validates :address, uniqueness: { scope: :city, :state }
+	validates :address, uniqueness: { scope: [:city, :state]}
 end
 
 
