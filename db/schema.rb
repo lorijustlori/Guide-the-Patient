@@ -10,7 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_14_183023) do
+ActiveRecord::Schema.define(version: 2018_06_14_211700) do
+
+  create_table "actions", force: :cascade do |t|
+    t.string "activity"
+    t.integer "number"
+    t.string "unit"
+    t.string "timeline"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "remedy_id"
+    t.index ["remedy_id"], name: "index_actions_on_remedy_id"
+  end
 
   create_table "ailments", force: :cascade do |t|
     t.string "code", null: false

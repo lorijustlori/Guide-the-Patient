@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  activity: MyString
+  number: 1
+  unit: MyString
+  before: MyString
+  after: MyString
+
+two:
+  activity: MyString
+  number: 1
+  unit: MyString
+  before: MyString
+  after: MyString
