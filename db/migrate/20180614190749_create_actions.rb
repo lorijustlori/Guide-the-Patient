@@ -4,9 +4,7 @@ class CreateActions < ActiveRecord::Migration[5.2]
       t.string :activity
       t.integer :number
       t.string :unit
-      t.string :before
-      t.string :after
-      t.integer :remedy
+      t.string :timeline
 
       t.timestamps
     end
