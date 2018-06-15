@@ -28,8 +28,9 @@ Action.create(activity:"No Weight On Leg", number:6, unit:"weeks or until instru
 Action.create(activity:"Change Dressing", number:1, unit:"time daily", timeline:"after", remedy_id: 287)
 Action.create(activity:"Ice Knee", number:3, unit:"times daily or as frequently as possible", timeline:"after", remedy_id: 287)
 
-// Find the Remedy for these actions
-// r = Remedy.find_by(code: "<CODE HERE>")
-// r.actions.create(activity: "Pay Bills", number: 3, unit: "days", timeline: "before")
+
+  # Find the Remedy for these actions
+  # r = Remedy.find_by(code: "<CODE HERE>")
+  # r.actions.create(activity: "Pay Bills", number: 3, unit: "days", timeline: "before")
 
 end
