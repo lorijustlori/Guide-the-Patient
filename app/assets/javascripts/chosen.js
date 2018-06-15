@@ -6,6 +6,7 @@ $(document).on("turbolinks:load", function(){
 
   $('#procedure_patient_id').on('change', function(){
     var selected  = $('#procedure_patient_id').find(':selected');
+
     var address   = selected.data('address');
     var city      = selected.data('city');
     var state     = selected.data('state');

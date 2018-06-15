@@ -5,9 +5,10 @@ class ProceduresController < ApplicationController
   end
 
   def new
-    @patients = Patient.all
-    @ailments = Ailment.all
-    @remedies = Remedy.all
+    @patients   = Patient.all
+    @ailments   = Ailment.all
+    @remedies   = Remedy.all
+    @physicians = Physician.all
   end
 
   def show
