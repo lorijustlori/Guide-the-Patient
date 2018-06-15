@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  devise_for :users
-  get 'procedures/create'
-  get 'procedures/new'
-  get 'procedures/show'
+  devise_for :users, :skip => [:registrations] 
+  resources :procedures, only: [:new, :create, :show]
 
-  root to: "sessions#new"
+  root 'procedures#new'
+
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

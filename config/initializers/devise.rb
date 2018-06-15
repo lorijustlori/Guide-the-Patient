@@ -1,5 +1,3 @@
-devise :database_authenticatable, :registerable, :confirmable, :recoverable, stretches: 12
-
 # frozen_string_literal: true
 
 # Use this hook to configure devise mailer, warden hooks and so forth.

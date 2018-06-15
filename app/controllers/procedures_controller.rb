@@ -1,4 +1,5 @@
 class ProceduresController < ApplicationController
+	before_action :authenticate_user!, only: [:new, :create]
   def create
   end
 
@@ -7,5 +8,5 @@ class ProceduresController < ApplicationController
 
   def show
   end
-  
+
 end
