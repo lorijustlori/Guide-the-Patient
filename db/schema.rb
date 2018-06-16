@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_15_163928) do
+ActiveRecord::Schema.define(version: 2018_06_16_172733) do
 
   create_table "actions", force: :cascade do |t|
     t.string "activity"
@@ -30,6 +30,15 @@ ActiveRecord::Schema.define(version: 2018_06_15_163928) do
     t.datetime "updated_at", null: false
     t.index ["code"], name: "index_ailments_on_code", unique: true
     t.index ["description"], name: "index_ailments_on_description", unique: true
+  end
+
+  create_table "diagnoses", force: :cascade do |t|
+    t.integer "remedy_id"
+    t.integer "ailment_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["ailment_id"], name: "index_diagnoses_on_ailment_id"
+    t.index ["remedy_id"], name: "index_diagnoses_on_remedy_id"
   end
 
   create_table "hospitals", force: :cascade do |t|
@@ -64,6 +73,20 @@ ActiveRecord::Schema.define(version: 2018_06_15_163928) do
     t.datetime "updated_at", null: false
     t.integer "hospital_id"
     t.index ["hospital_id"], name: "index_physicians_on_hospital_id"
+  end
+
+  create_table "procedures", force: :cascade do |t|
+    t.integer "patient_id"
+    t.integer "diagnosis_id"
+    t.integer "physician_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.date "date"
+    t.time "start_time"
+    t.time "end_time"
+    t.index ["diagnosis_id"], name: "index_procedures_on_diagnosis_id"
+    t.index ["patient_id"], name: "index_procedures_on_patient_id"
+    t.index ["physician_id"], name: "index_procedures_on_physician_id"
   end
 
   create_table "remedies", force: :cascade do |t|
