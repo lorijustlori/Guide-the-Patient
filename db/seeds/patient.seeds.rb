@@ -1,3 +1,5 @@
+Patient.delete_all
+
 100.times do
   Patient.create(
     medical_record_number:  Faker::IDNumber.valid,

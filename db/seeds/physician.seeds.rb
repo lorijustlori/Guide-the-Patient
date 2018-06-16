@@ -1,3 +1,5 @@
+Physician.delete_all
+
 after :hospital do
 
   100.times do

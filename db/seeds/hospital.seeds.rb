@@ -1,3 +1,5 @@
+Hospital.delete_all
+
 10.times do
   Hospital.create(
     name:     Faker::Company.name,

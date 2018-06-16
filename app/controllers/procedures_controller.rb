@@ -2,6 +2,13 @@ class ProceduresController < ApplicationController
 	before_action :authenticate_user!, only: [:new, :create]
 
   def create
+  	@diagnosis = Diagnosis.create(diagnosis_params)
+  	@procedure = Procedure.new(procedure_params)
+  	if @procedure.save!
+  		#logic
+  		redirect_to root_path
+  	else
+  		#logic
   end
 
   def new
@@ -17,13 +24,20 @@ class ProceduresController < ApplicationController
   end
 
 	private
-  	def remedy_params
-  		params.require(:remedy).permit(ailment_ids:[])
-  	end
 
-  	def ailment_params
-  		params.require(:ailment).permit(remedy_ids:[])
-  	end
+	def diagnosis_params
+		params.required(:procedure).permit(:ailment_id, :remedy_id)
 	end
 
+	def procedure_params
+		procedure = params.require(:procedure)
+		{
+			patient_id: procedure[:patient_id],
+			physician_id: procedure[:physician_id],
+			diagnosis_id: @diagnosis.id,
+			date: Date.strptime(procedure[:date], '%m/%d/%Y'),
+			start_time: Time.strptime(procedure[:start_time], '%I:%m %p'),
+			end_time: Time.strptime(procedure[:end_time], '%I:%m %p')
+		}
+	end
 end
