@@ -9,6 +9,7 @@ class ProceduresController < ApplicationController
   		redirect_to root_path
   	else
   		#logic
+  	end
   end
 
   def new
@@ -26,7 +27,10 @@ class ProceduresController < ApplicationController
 	private
 
 	def diagnosis_params
-		params.required(:procedure).permit(:ailment_id, :remedy_id)
+		params.required(:procedure).permit(
+			:ailment_id, 
+			:remedy_id, 
+			)
 	end
 
 	def procedure_params
@@ -35,9 +39,9 @@ class ProceduresController < ApplicationController
 			patient_id: procedure[:patient_id],
 			physician_id: procedure[:physician_id],
 			diagnosis_id: @diagnosis.id,
-			date: Date.strptime(procedure[:date], '%m/%d/%Y'),
-			start_time: Time.strptime(procedure[:start_time], '%I:%m %p'),
-			end_time: Time.strptime(procedure[:end_time], '%I:%m %p')
+			date: Date.strptime(procedure[:date], '%Y-%m-%d'),
+			start_time: Time.strptime(procedure[:start_time], '%H:%M'),
+			end_time: Time.strptime(procedure[:end_time], '%H:%M')
 		}
 	end
 end
