@@ -1,15 +1,53 @@
-<h1><%= @procedure.remedy.description %></h1>
-<h3><%= @procedure.ailment.description %></h3>
+
 <% if user_signed_in? %>
   <h4>Patient: <%= @procedure.patient.first_name %> <%= @procedure.patient.last_name %></h4>
 <% end %>
 
 <p>
   <strong>Physician: </strong> <%= @procedure.physician.first_name %> <%= @procedure.physician.last_name %> <br>
-  <strong>Hospital: </strong> <%= @procedure.physician.hospital.name %> <br>
-  <strong>Address: </strong> <%= @procedure.physician.hospital.address %>, <%= @procedure.physician.hospital.city %> <%= @procedure.physician.hospital.state %><br>
+
   <strong>Time: </strong><%= @procedure.start_at.strftime("%m/%d/%Y at %I:%M%p") %>
 </p>
+
+  <div class="row">
+  <div class="col-sm-3"  style="border: solid 1px black;"> <!-- col 1 -->
+    <div class="card">
+      <div class="card-body">
+        <%= image_tag "hospital" %>
+      <br>
+  <strong>Hospital: </strong> <%= @procedure.physician.hospital.name %> <br>
+  <strong>Address: </strong> <%= @procedure.physician.hospital.address %>, <%= @procedure.physician.hospital.city %> <%= @procedure.physician.hospital.state %><br>
+  <a href= "https://goo.gl/maps/FVxKxD2VH132">Google</a>
+      </div>
+    </div>
+  </div> <!-- first col -->
+
+  <div class="col-sm-6" style="border: solid 1px black;" > <!-- col 2 -->
+    <div class="card">
+      <div class="card-body">
+         <%= image_tag "rotator"%>
+      </div>
+
+    </div>
+  </div> <!-- end of second col -->
+  <div class="col-sm-3" style="border: solid 1px black;"> <!-- col 3 -->
+    <div class="card">
+    hello
+           <p><%= @procedure.remedy.description %></p>
+  <p><%= @procedure.ailment.description %></p>
+  </div> <!-- card end -->
+  </div> <!-- 3rd col -->
+
+
+</div> <!--end of row-->
+
+
+
+
+
+</div>
+</div>
+
 
 <h3>Tasks</h3>
 
