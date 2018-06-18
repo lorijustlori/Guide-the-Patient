@@ -1,4 +1,4 @@
-<h1>New Procedure</h1>
+<h1>Surgery Scheduling</h1>
 
 <%= form_with(url: procedures_url, local: true) do %>
 
@@ -98,17 +98,9 @@
     </div>
   </div>
   <div class="row">
-    <div class="form-group col-md-4">
-      <%= label_tag("procedure[date]", "Date") %>
-      <%= date_field_tag("procedure[date]", nil, class: "form-control") %>
-    </div>
-    <div class="form-group col-md-4">
-      <%= label_tag("procedure[start_time]", "Start Time") %>
-      <%= time_field_tag("procedure[stsrt_time]", nil, class: "form-control") %>
-    </div>
-    <div class="form-group col-md-4">
-      <%= label_tag("procedure[end_time]", "End Time") %>
-      <%= time_field_tag("procedure[end_time]", nil, class: "form-control") %>
+    <div class="form-group col-md">
+      <%= label_tag("procedure[start_at]", "Start") %>
+      <%= datetime_field_tag("procedure[start_at]", nil, class: "form-control") %>
     </div>
   </div>
   <div class="actions">

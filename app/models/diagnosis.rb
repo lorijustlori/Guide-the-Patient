@@ -1,5 +1,4 @@
 class Diagnosis < ApplicationRecord
-  belongs_to :remedy
   belongs_to :ailment
-  has_many :procedures
+  belongs_to :procedure
 end
