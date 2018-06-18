@@ -1,2 +1,16 @@
-<h1>Procedures#show</h1>
-<p>Find me in app/views/procedures/show.html.erb</p>
+<h1><%= @procedure.remedy.description %></h1>
+<h3><%= @procedure.ailment.description %></h3>
+<% if user_signed_in? %>
+  <h4>Patient: <%= @procedure.patient.first_name %> <%= @procedure.patient.last_name %></h4>
+<% end %>
+
+<p>
+  <strong>Physician: </strong> <%= @procedure.physician.first_name %> <%= @procedure.physician.last_name %> <br>
+  <strong>Hospital: </strong> <%= @procedure.physician.hospital.name %> <br>
+  <strong>Address: </strong> <%= @procedure.physician.hospital.address %>, <%= @procedure.physician.hospital.city %> <%= @procedure.physician.hospital.state %><br>
+  <strong>Time: </strong><%= @procedure.start_at.strftime("%m/%d/%Y at %I:%M%p") %>
+</p>
+
+<h3>Tasks</h3>
+
+Different kinds of tasks go here

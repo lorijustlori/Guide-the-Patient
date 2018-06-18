@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_16_172733) do
+ActiveRecord::Schema.define(version: 2018_06_18_173501) do
 
   create_table "actions", force: :cascade do |t|
     t.string "activity"
@@ -33,12 +33,12 @@ ActiveRecord::Schema.define(version: 2018_06_16_172733) do
   end
 
   create_table "diagnoses", force: :cascade do |t|
-    t.integer "remedy_id"
     t.integer "ailment_id"
+    t.integer "procedure_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["ailment_id"], name: "index_diagnoses_on_ailment_id"
-    t.index ["remedy_id"], name: "index_diagnoses_on_remedy_id"
+    t.index ["procedure_id"], name: "index_diagnoses_on_procedure_id"
   end
 
   create_table "hospitals", force: :cascade do |t|
@@ -77,16 +77,14 @@ ActiveRecord::Schema.define(version: 2018_06_16_172733) do
 
   create_table "procedures", force: :cascade do |t|
     t.integer "patient_id"
-    t.integer "diagnosis_id"
     t.integer "physician_id"
+    t.integer "remedy_id"
+    t.datetime "start_at", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.date "date"
-    t.time "start_time"
-    t.time "end_time"
-    t.index ["diagnosis_id"], name: "index_procedures_on_diagnosis_id"
     t.index ["patient_id"], name: "index_procedures_on_patient_id"
     t.index ["physician_id"], name: "index_procedures_on_physician_id"
+    t.index ["remedy_id"], name: "index_procedures_on_remedy_id"
   end
 
   create_table "remedies", force: :cascade do |t|
