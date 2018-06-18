@@ -8,6 +8,17 @@
   </head>
 
   <body>
+    <h1>Welcome to your schedule guide, <%= @patient.first_name %><%= @patient.last_name %> </h1>
+
+    <p>
+      We would like to make your exprience as comfortable and stress-free as possible.<br>
+      Please click on the link below to lead you to a detailed guide to assist you in learning more about your surgery.
+    </p>
+    
+    <p>
+      Please feel free to contact us if you have any questions.
+    </p>
+
     <%= yield %>
   </body>
 </html>
