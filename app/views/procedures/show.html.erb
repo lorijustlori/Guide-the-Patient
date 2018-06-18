@@ -11,6 +11,30 @@
   <strong>Time: </strong><%= @procedure.start_at.strftime("%m/%d/%Y at %I:%M%p") %>
 </p>
 
-<h3>Tasks</h3>
+<h3>To Do List</h3>
 
-Different kinds of tasks go here
+<div> 
+	<h5>Pre-Operative To Do List</h5>
+	<ul>
+		<% @before_tasks.each do |task| %>
+			<li> <%= task.activity %> <%= task.number %> <%= task.unit%> <%= task.timeline%></li>
+		<% end %>
+	</ul>
+
+</div>
+
+<div> 
+	<h5>This is to show the Day Of Surgery list.</h5>
+
+</div>
+
+<div> 
+	<h5>Pre-Operative To Do List</h5>
+	<ul>
+		<% @after_tasks.each do |task| %>
+			<li> <%= task.activity %> <%= task.number %> <%= task.unit%> <%= task.timeline%></li>
+		<% end %>
+	</ul>
+</div>
+
+
