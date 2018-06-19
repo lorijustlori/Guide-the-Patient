@@ -19,10 +19,10 @@ class ProceduresController < ApplicationController
   end
 
   def show
-    @procedure = Procedure.find(params[:id])
-    @before_tasks = Action.where(remedy_id: @procedure.remedy.id, timeline: "before")
-    @after_tasks = Action.where(remedy_id: @procedure.remedy.id, timeline: "after")
-
+    @procedure    = Procedure.find(params[:id])
+    @before_tasks = @procedure.tasks.before
+    @after_tasks  = @procedure.tasks.after
+    @day_of_tasks = @procedure.tasks.day_of
   end
 
 	private

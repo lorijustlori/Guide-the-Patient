@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_19_170731) do
+ActiveRecord::Schema.define(version: 2018_06_19_183140) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "actions", force: :cascade do |t|
     t.string "activity"
@@ -19,7 +22,7 @@ ActiveRecord::Schema.define(version: 2018_06_19_170731) do
     t.string "timeline"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "remedy_id"
+    t.bigint "remedy_id"
     t.index ["remedy_id"], name: "index_actions_on_remedy_id"
   end
 
@@ -33,8 +36,8 @@ ActiveRecord::Schema.define(version: 2018_06_19_170731) do
   end
 
   create_table "diagnoses", force: :cascade do |t|
-    t.integer "ailment_id"
-    t.integer "procedure_id"
+    t.bigint "ailment_id"
+    t.bigint "procedure_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["ailment_id"], name: "index_diagnoses_on_ailment_id"
@@ -71,14 +74,14 @@ ActiveRecord::Schema.define(version: 2018_06_19_170731) do
     t.string "last_name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "hospital_id"
+    t.bigint "hospital_id"
     t.index ["hospital_id"], name: "index_physicians_on_hospital_id"
   end
 
   create_table "procedures", force: :cascade do |t|
-    t.integer "patient_id"
-    t.integer "physician_id"
-    t.integer "remedy_id"
+    t.bigint "patient_id"
+    t.bigint "physician_id"
+    t.bigint "remedy_id"
     t.datetime "start_at", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -97,10 +100,11 @@ ActiveRecord::Schema.define(version: 2018_06_19_170731) do
   end
 
   create_table "tasks", force: :cascade do |t|
-    t.integer "action_id"
-    t.integer "procedure_id"
+    t.bigint "action_id"
+    t.bigint "procedure_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "due_at"
     t.index ["action_id"], name: "index_tasks_on_action_id"
     t.index ["procedure_id"], name: "index_tasks_on_procedure_id"
   end
@@ -122,4 +126,13 @@ ActiveRecord::Schema.define(version: 2018_06_19_170731) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "actions", "remedies"
+  add_foreign_key "diagnoses", "ailments"
+  add_foreign_key "diagnoses", "procedures"
+  add_foreign_key "physicians", "hospitals"
+  add_foreign_key "procedures", "patients"
+  add_foreign_key "procedures", "physicians"
+  add_foreign_key "procedures", "remedies"
+  add_foreign_key "tasks", "actions"
+  add_foreign_key "tasks", "procedures"
 end

@@ -8,7 +8,7 @@ Action.create(activity:"Fill prescriptions", number: 1, unit:"week", timeline:"b
 Action.create(activity:"Complete blood work", number: 1, unit:"week", timeline:"before", remedy_id: 23)
 Action.create(activity:"Complete chest X-ray", number: 1, unit:"week", timeline:"before", remedy_id: 23)
 Action.create(activity:"Complete EKG", number:1, unit:"week", timeline:"before", remedy_id: 23)
-Action.create(activity:"Fasting by midnight", number: 1, unit:"night", timeline:"before", remedy_id: 23)
+Action.create(activity:"Fasting by midnight", number: 1, unit:"day", timeline:"before", remedy_id: 23)
 Action.create(activity:"Schedule follow-up appointment with doctor", number:1, unit:"week", timeline:"after", remedy_id: 23)
 Action.create(activity:"Schedule 1st physical therapy", number: 1, unit:"month", timeline:"after", remedy_id: 23)
 Action.create(activity:"Do not lift heavy objects for", number: 6, unit:"weeks or until instructed by Doctor", timeline:"after", remedy_id: 23)
@@ -24,14 +24,15 @@ Action.create(activity:"Fill prescriptions", number: 1, unit:"week", timeline:"b
 Action.create(activity:"Complete blood work", number: 1, unit:"week", timeline:"before", remedy_id: 287)
 Action.create(activity:"Complete X-ray", number: 1, unit:"week", timeline:"before", remedy_id: 287)
 Action.create(activity:"Complete EKG", number:1, unit:"week", timeline:"before", remedy_id: 287)
-Action.create(activity:"Fasting by midnight", number: 1, unit:"night", timeline:"before", remedy_id: 287)
+Action.create(activity:"Fasting by midnight", number: 1, unit:"day", timeline:"before", remedy_id: 287)
 Action.create(activity:"Schedule follow-up appointment with doctor", number:1, unit:"week", timeline:"after", remedy_id: 287)
 Action.create(activity:"Schedule physical therapy", number: 1, unit:"month", timeline:"after", remedy_id: 287)
 Action.create(activity:"Can shower", number: 3, unit:"days", timeline:"after", remedy_id: 287)
 Action.create(activity:"When showering keep knee covered in plastic", number: 1, unit:"week", timeline:"after", remedy_id: 287)
-Action.create(activity:"No weight on leg", number: 6, unit:"weeks or until instructed by Doctor", timeline:"after", remedy_id: 287)
-Action.create(activity:"Change dressings", number: 1, unit:"time daily", timeline:"after", remedy_id: 287)
-Action.create(activity:"Ice knee", number: 3, unit:"times daily or as frequently as possible", timeline:"after", remedy_id: 287)
+Action.create(activity:"No weight on leg", number: 6, unit:"weeks", timeline:"after", remedy_id: 287)
+Action.create(activity:"Change dressings", number: 1, unit:"day", timeline:"after", remedy_id: 287)
+Action.create(activity:"Ice knee", number: 3, unit:"days", timeline:"after", remedy_id: 287)
+Action.create(activity:"Arrive at hospital", number: 2, unit:"hours", timeline:"before", remedy_id: 287)
 
 
   # Find the Remedy for these actions

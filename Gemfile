@@ -7,10 +7,9 @@ gem 'faker'
 gem 'seedbank'
 gem 'chosen-rails'
 gem 'jquery-rails'
+gem 'pg'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
