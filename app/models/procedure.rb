@@ -4,6 +4,7 @@ class Procedure < ApplicationRecord
   belongs_to :remedy
   has_one :diagnosis
   has_one :ailment, through: :diagnosis
+  has_many :tasks
 
   after_create :send_email
 
@@ -13,10 +14,11 @@ class Procedure < ApplicationRecord
       PatientMail.with(patient: @patient).schedule_email.deliver_now
 
       format.html { redirect_to(@procedure, notice:'Email was successfully sent to patient')}
-      format.json {render json: @procedure status: :saved, location: @procedure }
+      format.json { render json: @procedure status: :saved, location: @procedure }
     else
       format.html { render action: 'new'}
       format.json { render json: @procedure.errors, status: :unprocessable_entity }
+    end
     end
   end
 end
