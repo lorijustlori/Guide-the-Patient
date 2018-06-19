@@ -1,3 +1,5 @@
+Ailment.delete_all
+
 require 'csv'
 
 CSV.foreach(

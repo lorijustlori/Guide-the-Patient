@@ -1,3 +1,5 @@
+Remedy.delete_all
+
 require 'csv'
 
 CSV.foreach(
