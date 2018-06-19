@@ -22,7 +22,7 @@ class ProceduresController < ApplicationController
     @procedure = Procedure.find(params[:id])
     @before_tasks = Action.where(remedy_id: @procedure.remedy.id, timeline: "before")
     @after_tasks = Action.where(remedy_id: @procedure.remedy.id, timeline: "after")
-    
+
   end
 
 	private

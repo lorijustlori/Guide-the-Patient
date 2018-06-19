@@ -9,16 +9,9 @@ class Procedure < ApplicationRecord
   after_create :send_email
 
   def send_email
-    respond_to do |format|
-    if @procedure.save
-      PatientMail.with(patient: @patient).schedule_email.deliver_now
-
-      format.html { redirect_to(@procedure, notice:'Email was successfully sent to patient')}
-      format.json { render json: @procedure status: :saved, location: @procedure }
-    else
-      format.html { render action: 'new'}
-      format.json { render json: @procedure.errors, status: :unprocessable_entity }
-    end
-    end
+    PatientMailer.with(
+      patient:    self.patient, 
+      procedure:  self
+    ).schedule_email.deliver_now
   end
 end

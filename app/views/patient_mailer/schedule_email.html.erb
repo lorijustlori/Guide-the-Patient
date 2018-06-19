@@ -1,3 +1,15 @@
-Hello <%= @patient.email %>
+<h1>Welcome to your schedule guide.</h1>
 
-This is where you will write the email that goes to the patient
+Hello <%= @patient.first_name %> <%= @patient.last_name %>
+
+<p>
+  We would like to make your exprience as comfortable and stress-free as possible.<br>
+  Please click on <%= link_to "This Link", @procedure %> for your guide that describes your surgery and things to do before and after your procedure.
+</p>
+
+<p>
+  Please read through the information and take note of the contact information included.
+</p>
+
+<p>See you on the other side!</p>
+<p>Guide The Patient</p>

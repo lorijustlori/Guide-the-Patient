@@ -1,10 +1,7 @@
-class PatientMailer < ActionMailer
-  default from: 'notifications@example.com'
-
+class PatientMailer < ApplicationMailer
   def schedule_email
-    @patient = params[:patient]
-    @procedure = params [:procedure]
-    @url = 'http://example.com/login'
+    @patient 	= params[:patient]
+    @procedure 	= params[:procedure]
     mail(to: @patient.email, subject: 'Your Surgery Schedule')
   end
 end
