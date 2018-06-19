@@ -32,7 +32,7 @@
   </div> <!-- end of second col -->
   <div class="col-sm-3" style="border: solid 1px black;"> <!-- col 3 -->
     <div class="card">
-    
+
        <p><%= @procedure.remedy.description %></p>
   <p><%= @procedure.ailment.description %></p>
   </div> <!-- card end -->
@@ -49,31 +49,17 @@
 </div>
 
 
-<h3>Tasks</h3>
-<h3>To Do List</h3>
+<h3>Before</h3>
+<%@before_tasks.each do |task| %>
+  <div><%= task.action.activity %> <%=task.due_at %></div>
+<% end %>
 
-<div> 
-	<h5>Pre-Operative To Do List</h5>
-	<ul>
-		<% @before_tasks.each do |task| %>
-			<li> <%= task.activity %> <%= task.number %> <%= task.unit%> <%= task.timeline%></li>
-		<% end %>
-	</ul>
+<h3>Day Of</h3>
+<%@day_of_tasks.each do |task| %>
+  <div><%= task.action.activity %> <%=task.due_at %></div>
+<% end %>
 
-</div>
-
-<div> 
-	<h5>Today is the big day!   Make sure that you have been fasting since midnight!  Please arrive at the hospital 2 hours prior to your surgery.  You should arrive by ......   We will see your there!</h5>
-
-</div>
-
-<div> 
-	<h5>Pre-Operative To Do List</h5>
-	<ul>
-		<% @after_tasks.each do |task| %>
-			<li> <%= task.activity %> <%= task.number %> <%= task.unit%> <%= task.timeline%></li>
-		<% end %>
-	</ul>
-</div>
-
-
+<h3>After</h3>
+<%@after_tasks.each do |task| %>
+  <div><%= task.action.activity %> <%=task.due_at %></div>
+<% end %>

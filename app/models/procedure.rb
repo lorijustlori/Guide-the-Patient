@@ -6,19 +6,28 @@ class Procedure < ApplicationRecord
   has_one :ailment, through: :diagnosis
   has_many :tasks
 
+  after_create :create_tasks
   after_create :send_email
 
-  def send_email
-    respond_to do |format|
-    if @procedure.save
-      PatientMail.with(patient: @patient).schedule_email.deliver_now
+  def create_tasks
+    remedy.actions.each do |action|
+      operation = if action.timeline == "before"
+                    :-
+                  elsif action.timeline == "after"
+                    :+
+                  end
+      time      = action.number.send(action.unit)
+      action.tasks.create(
+        procedure:  self,
+        due_at:     self.start_at.send(operation, time)
+      )
+    end
+  end
 
-      format.html { redirect_to(@procedure, notice:'Email was successfully sent to patient')}
-      format.json { render json: @procedure status: :saved, location: @procedure }
-    else
-      format.html { render action: 'new'}
-      format.json { render json: @procedure.errors, status: :unprocessable_entity }
-    end
-    end
+  def send_email
+    PatientMailer.with(
+      patient:    self.patient,
+      procedure:  self
+    ).schedule_email.deliver_now
   end
 end

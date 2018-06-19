@@ -5,5 +5,3 @@ class Action < ApplicationRecord
 	validates :activity, :number, :unit, presence: true
 	validates :timeline, inclusion: { in: [ "before", "after" ]}
 end
-
-
