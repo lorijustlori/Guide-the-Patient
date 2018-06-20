@@ -12,3 +12,5 @@ after :hospital do
   end
 
 end
+
+Physician.create(first_name:"Tushani", last_name:"Naidoo", hospital:"Jackson Memorial Hospital")
