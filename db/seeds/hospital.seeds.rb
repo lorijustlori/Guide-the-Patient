@@ -10,3 +10,5 @@ Hospital.delete_all
   )
   puts "#{Hospital.count} hospitals"
 end
+
+Hospital.create(name:"Jackson Memorial Hospital", address: "1611 NW 12th Street", city: "Miami", state: "FL", phone: 3055851111)
