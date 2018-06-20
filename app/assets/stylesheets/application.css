@@ -14,3 +14,14 @@
  *= require_tree .
  *= require_self
  */
+body {
+	background-color: honeydew !important;
+}
+
+.schedule {
+	background-color: honeydew !important;
+}
+
+.login {
+	background-color: honeydew !important;
+}

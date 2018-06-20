@@ -1,4 +1,5 @@
 
+<body>
 <% if user_signed_in? %>
   <h4>Patient: <%= @procedure.patient.first_name %> <%= @procedure.patient.last_name %></h4>
 <% end %>
@@ -6,60 +7,81 @@
 <p>
   <strong>Physician: </strong> <%= @procedure.physician.first_name %> <%= @procedure.physician.last_name %> <br>
 
-  <strong>Time: </strong><%= @procedure.start_at.strftime("%m/%d/%Y at %I:%M%p") %>
+  <strong>Surgery Date/Time: </strong><%= @procedure.start_at.strftime("%m/%d/%Y at %I:%M%p") %>
 </p>
 
-  <div class="row">
-  <div class="col-sm-3"  style="border: solid 1px black;"> <!-- col 1 -->
-    <div class="card">
-      <div class="card-body">
-        <%= image_tag "hospital" %>
-      <br>
-  <strong>Hospital: </strong> <%= @procedure.physician.hospital.name %> <br>
+
+
+
+    	<div class="row">
+  <div class="col-md-4">
+    <div class="thumbnail1">
+      <a href="/app/assets/images/TLG.png">
+        <img src="/app/assets/images/TLG.png" alt="Logo" style="width:100%">
+        <div class="caption">
+          <p><strong>Hospital: </strong> <%= @procedure.physician.hospital.name %> <br>
   <strong>Address: </strong> <%= @procedure.physician.hospital.address %>, <%= @procedure.physician.hospital.city %> <%= @procedure.physician.hospital.state %><br>
-  <a href= "https://goo.gl/maps/FVxKxD2VH132">Google</a>
-      </div>
+  <a href= "https://goo.gl/maps/FVxKxD2VH132">Google</a></p>
+        </div>
+      </a>
     </div>
-  </div> <!-- first col -->
-
-  <div class="col-sm-6" style="border: solid 1px black;" > <!-- col 2 -->
-    <div class="card">
-      <div class="card-body">
-         <%= image_tag "rotator"%>
-      </div>
-
+  </div>
+  <div class="col-md-4">
+    <div class="thumbnail2">
+      <a href="rotatorcuffrepair">
+        <img src="rotatorcuffrepair" alt="Rotator Cuff Repair" style="width:100%">
+        <div class="caption">
+          <p>Lorem ipsum...</p>
+        </div>
+      </a>
     </div>
-  </div> <!-- end of second col -->
-  <div class="col-sm-3" style="border: solid 1px black;"> <!-- col 3 -->
-    <div class="card">
-
-       <p><%= @procedure.remedy.description %></p>
-  <p><%= @procedure.ailment.description %></p>
-  </div> <!-- card end -->
-  </div> <!-- 3rd col -->
-
-
-</div> <!--end of row-->
-
-
-
-
-
-</div>
+  </div>
+  <div class="col-md-4">
+    <div class="thumbnail3">
+      <a href="#">
+        
+          <p>Lorem ipsum...</p>
+        </div>
+      </a>
+    </div>
+  </div>
 </div>
 
 
-<h3>Before</h3>
+
+<ul class="nav nav-pills">
+	<div>
+  	<li class="nav-item">
+    <a class="nav-link active" href="#">Pre-Op To Do List</a>
+    <h3>Pre-Op Due Dates</h3>
 <%@before_tasks.each do |task| %>
-  <div><%= task.action.activity %> <%=task.due_at %></div>
+  <div><%= task.action.activity %> <%=task.due_at.strftime("%m/%d/%Y")%></div>
 <% end %>
-
-<h3>Day Of</h3>
+  	</li>
+	</div>
+	<div>
+  	<li class="nav-item">
+    <a class="nav-link" href="#">Day of Surgery Reminders</a>
+  	</li>
+  	<h3>Day Of Surgery Reminders</h3>
 <%@day_of_tasks.each do |task| %>
-  <div><%= task.action.activity %> <%=task.due_at %></div>
+  <div><%= task.action.activity %></div>
 <% end %>
-
-<h3>After</h3>
+	</div>
+	<div>
+  	<li class="nav-item">
+    <a class="nav-link" href="#">Post-Operative To Do List</a>
+  	</li>
+  	<h3>Post-Op Tasks</h3>
 <%@after_tasks.each do |task| %>
-  <div><%= task.action.activity %> <%=task.due_at %></div>
+  <div><%= task.action.activity %> <%= task.action.number %> <%= task.action.unit %> <%= task.action.timeline %></div>
 <% end %>
+  </div>
+</ul>
+</body>
+
+
+
+
+
+
