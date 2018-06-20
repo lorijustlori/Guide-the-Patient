@@ -13,19 +13,20 @@
   <div class="col-sm-3"  style="border: solid 1px black;"> <!-- col 1 -->
     <div class="card">
       <div class="card-body">
-        <%= image_tag "hospital" %>
-      <br>
+        <%= image_tag "hospital" ,id:"hospital"%>
+      <p>
   <strong>Hospital: </strong> <%= @procedure.physician.hospital.name %> <br>
   <strong>Address: </strong> <%= @procedure.physician.hospital.address %>, <%= @procedure.physician.hospital.city %> <%= @procedure.physician.hospital.state %><br>
+  </p>
   <a href= "https://goo.gl/maps/pr1GVkZiJU52">Google</a>
       </div>
     </div>
   </div> <!-- first col -->
 
-  <div class="col-sm-6" style="border: solid 1px black;" > <!-- col 2 -->
+  <div class="col-sm-5" style="border: solid 1px black;" > <!-- col 2 -->
     <div class="card">
       <div class="card-body">
-         <%= image_tag "rotator"%>
+         <%= image_tag "rotator",id:"rotator" %>
       </div>
 
     </div>
@@ -42,19 +43,6 @@
 </div> <!--end of row-->
 
 
-<%# <ul class="nav nav-pills">
-  <li class="active"><a href="#">Before</a></li>
-  <li><a href="#">Day of</a></li>
-  <li><a href="#">After</a></li>
-</ul> %>
-<%# <div class="container">
-<ul class="nav nav-tabs">
-  <li class="active"><a href="#">Before</a>
-  </li>
-  <li><a href="#">Dayof </a></li>
-  <br>
-  <li><a href="#">After</a></li>
-</ul> %>
 
 
 <div class="container">

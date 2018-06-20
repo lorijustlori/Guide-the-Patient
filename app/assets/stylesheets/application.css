@@ -14,3 +14,16 @@
  *= require_tree .
  *= require_self
  */
+#hospital{
+width: 150px;
+flex-direction: center;
+}
+
+p{
+font-size: 50px;
+}
+
+#rotator{
+    width: 100%;
+    height: 1000px;
+}
