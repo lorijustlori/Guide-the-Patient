@@ -13,4 +13,4 @@ after :hospital do
 
 end
 
-Physician.create(first_name:"Tushani", last_name:"Naidoo", hospital:"Jackson Memorial Hospital")
+Physician.create(first_name:"Tushani", last_name:"Naidoo", hospital: Hospital.find_by(name:"Jackson Memorial Hospital"))
