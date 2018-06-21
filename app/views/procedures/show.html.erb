@@ -14,10 +14,9 @@
 
 
     	<div class="row">
-  <div class="col-md-4">
+  <div class="col-md-2">
     <div class="thumbnail1">
-      <a href="/app/assets/images/TLG.png">
-        <img src="/app/assets/images/TLG.png" alt="Logo" style="width:100%">
+        <%= image_tag 'TLG', alt: "Logo", style: "width:100%" %>
         <div class="caption">
           <p><strong>Hospital: </strong> <%= @procedure.physician.hospital.name %> <br>
   <strong>Address: </strong> <%= @procedure.physician.hospital.address %>, <%= @procedure.physician.hospital.city %> <%= @procedure.physician.hospital.state %><br>
@@ -26,17 +25,16 @@
       </a>
     </div>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-7">
     <div class="thumbnail2">
-      <a href="rotatorcuffrepair">
-        <img src="rotatorcuffrepair" alt="Rotator Cuff Repair" style="width:100%">
+        <%= image_tag 'rotatorcuffrepair', alt: "Rotator Cuff Repair", style: "width:100%" %>
         <div class="caption">
           <p>Lorem ipsum...</p>
         </div>
       </a>
     </div>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-3">
     <div class="thumbnail3">
       <a href="#">
         
@@ -48,40 +46,70 @@
 </div>
 
 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
 
-<ul class="nav nav-pills">
-	<div>
-  	<li class="nav-item">
-    <a class="nav-link active" href="#">Pre-Op To Do List</a>
-    <h3>Pre-Op Due Dates</h3>
-<%@before_tasks.each do |task| %>
+<div class="w3-container">
+  <h2>Click on tabs below for your reminders.</h2>
+
+  <div class="w3-row">
+    <a href="javascript:void(0)" onclick="openTodo(event, 'Pre-Operative');">
+      <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Pre-Operative</div>
+    </a>
+    <a href="javascript:void(0)" onclick="openTodo(event, 'Day Of Surgery');">
+      <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Day Of Surgery</div>
+    </a>
+    <a href="javascript:void(0)" onclick="openTodo(event, 'Post-Operative');">
+      <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Post-Operative</div>
+    </a>
+  </div>
+
+  <div id="Pre-Operative" class="w3-container todo" style="display:none">
+    Below is a list of things that will help you to organize your time prior to surgery.<br>  
+    Your physician's office has given you a list of pre-operative testing to clear you for your procedure.<br>  Please take note of the timelines below.<br>  The list also includes some things to keep in mind to prepare you for recovery.  
+    <ul>
+			<%@before_tasks.each do |task| %>
   <div><%= task.action.activity %> <%=task.due_at.strftime("%m/%d/%Y")%></div>
-<% end %>
-  	</li>
-	</div>
-	<div>
-  	<li class="nav-item">
-    <a class="nav-link" href="#">Day of Surgery Reminders</a>
-  	</li>
-  	<h3>Day Of Surgery Reminders</h3>
+			<% end %>
+		</ul>
+  </div>
+
+  <div id="Day Of Surgery" class="w3-container todo" style="display:none">
+  	Today is the big day!  <br>
+  	Remember a few things listed below. <br>
+  	No worries, you are in good hands!
+  	<ul>
 <%@day_of_tasks.each do |task| %>
   <div><%= task.action.activity %></div>
 <% end %>
-	</div>
-	<div>
-  	<li class="nav-item">
-    <a class="nav-link" href="#">Post-Operative To Do List</a>
-  	</li>
-  	<h3>Post-Op Tasks</h3>
+</ul>
+  </div>
+
+  <div id="Post-Operative" class="w3-container todo" style="display:none">
+   Your physician has given you a list of instructions for after your surgery. <br>
+    Keep in mind the points below, but also pay attention your recovery. <br>
+  	<ul>
 <%@after_tasks.each do |task| %>
   <div><%= task.action.activity %> <%= task.action.number %> <%= task.action.unit %> <%= task.action.timeline %></div>
 <% end %>
   </div>
-</ul>
+</div>
+
+<script>
+function openTodo(evt, cityName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" w3-border-green", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-border-green";
+}
+</script>
+
 </body>
-
-
-
-
-
-
