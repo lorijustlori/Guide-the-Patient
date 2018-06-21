@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  devise_for :users, :skip => [:registrations] 
-  resources :procedures, only: [:new, :create, :show]
+  devise_for :users, :skip => [:registrations]
+  resources :procedures, only: [:new, :create, :show], param: :uuid
 
   root 'procedures#new'
 
