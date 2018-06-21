@@ -19,7 +19,7 @@ class ProceduresController < ApplicationController
   end
 
   def show
-    @procedure    = Procedure.find(params[:id])
+    @procedure    = Procedure.find_by!(uuid: params[:uuid])
     @before_tasks = @procedure.tasks.before
     @after_tasks  = @procedure.tasks.after
     @day_of_tasks = @procedure.tasks.day_of
