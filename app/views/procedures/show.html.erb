@@ -1,7 +1,9 @@
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <body>
+
 <% if user_signed_in? %>
-  <h4>Patient: <%= @procedure.patient.first_name %> <%= @procedure.patient.last_name %></h4>
+  <h5>Patient: <u><%= @procedure.patient.first_name %> <%= @procedure.patient.last_name %></u></h5>
 <% end %>
 
 <p>
@@ -10,45 +12,68 @@
   <strong>Surgery Date/Time: </strong><%= @procedure.start_at.strftime("%m/%d/%Y at %I:%M%p") %>
 </p>
 
+<div class="hi">
+  <div class="row">
 
+    <div class="col" id="hospital">
+      <div class="w3-card-4">
 
-
-    	<div class="row">
-  <div class="col-md-2">
-    <div class="thumbnail1">
-        <%= image_tag 'TLG', alt: "Logo", style: "width:100%" %>
-        <div class="caption">
-          <p><strong>Hospital: </strong> <%= @procedure.physician.hospital.name %> <br>
-  <strong>Address: </strong> <%= @procedure.physician.hospital.address %>, <%= @procedure.physician.hospital.city %> <%= @procedure.physician.hospital.state %><br>
-  <a href= "https://goo.gl/maps/pr1GVkZiJU52">Google</a></p>
-        </div>
-      </a>
+          <div class='TLG'>
+      <%= image_tag 'TLG', alt: "Logo", style: "width:85%" %>
     </div>
-  </div>
-  <div class="col-md-7">
-    <div class="thumbnail2">
-        <%= image_tag 'rotatorcuffrepair', alt: "Rotator Cuff Repair", style: "width:100%" %>
+
+        <br>
         <div class="caption">
-          <p>Lorem ipsum...</p>
+        <p><strong>Hospital: </strong> <%= @procedure.physician.hospital.name %> <br>
+        <strong>Address: </strong> <%= @procedure.physician.hospital.address %>, <%= @procedure.physician.hospital.city %> <%= @procedure.physician.hospital.state %><br>
+        <a href= "https://goo.gl/maps/pr1GVkZiJU52"><u><strong>Directions</strong></u></a></p>
+        <br>
         </div>
-      </a>
+      </div>
     </div>
-  </div>
-  <div class="col-md-3">
-    <div class="thumbnail3">
-      <a href="#">
-        
-          <p>Lorem ipsum...</p>
-        </div>
+
+    <div class="col" id="operation">
+      <div class="surgpic">
+        <div id= "bigpicture">
+        <% if @procedure.remedy_id == 287 %>
+          <%= image_tag 'rotatorcuffrepair', alt: "Rotator Cuff Repair", style: "width:100%" %>
+        <% elsif @procedure.remedy_id == 23 %>
+          <%= image_tag 'knee', alt: "Knee Surgery", style: "width:100%" %>
+        <% end %>
+      </div>
       </a>
+      </div>
+    </div>
+
+    <div class="col" id="description">
+      <div class="w3-card-5">
+
+        <% if @procedure.remedy_id == 287 %>
+          <% "Talk about shoulder surgery here" %>
+        <% elsif @procedure.remedy_id == 23 %>
+          <% "Talk about knee surgery here" %>
+        <% end %>
+
+
+        <header class="w3-container w3-pale-red">
+        <h4>What happens during a rotator cuff repair surgery</h4>
+        </header>
+
+        <div class="w3-container">
+        <p>The tendons are re-attached to the bone.<br />
+        Small rivets (called suture anchors) are often used to help attach the tendon to the bone. <br />The suture anchors can be made of metal or material that dissolves over time, <br />
+        and do not need to be removed.
+        Sutures (stitches) are attached to the anchors, <br/> which tie the tendon back to the bone.</p>
+        </div>
+
+      </div>
     </div>
   </div>
 </div>
 
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<body>
+
+</div>
 
 <div class="w3-container">
   <h2>Click on tabs below for your reminders.</h2>
@@ -66,8 +91,8 @@
   </div>
 
   <div id="Pre-Operative" class="w3-container todo" style="display:none">
-    Below is a list of things that will help you to organize your time prior to surgery.<br>  
-    Your physician's office has given you a list of pre-operative testing to clear you for your procedure.<br>  Please take note of the timelines below.<br>  The list also includes some things to keep in mind to prepare you for recovery.  
+    Below is a list of things that will help you to organize your time prior to surgery.<br>
+    Your physician's office has given you a list of pre-operative testing to clear you for your procedure.<br>  Please take note of the timelines below.<br>  The list also includes some things to keep in mind to prepare you for recovery.
     <ul>
 			<%@before_tasks.each do |task| %>
   <div><%= task.action.activity %> <%=task.due_at.strftime("%m/%d/%Y")%></div>

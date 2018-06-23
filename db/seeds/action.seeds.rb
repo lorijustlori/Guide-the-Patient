@@ -26,7 +26,7 @@ Action.create(activity:"If staying overnight, be sure to bring necessary persona
 Action.create(activity:"If going home today, be sure to have someone to drive you home", number: 2, unit:"hours", timeline:"after")
 Action.create(activity:"Schedule follow-up appointment with doctor", number:1, unit:"week", timeline:"after", remedy_id: 23)
 Action.create(activity:"Schedule 1st physical therapy", number: 1, unit:"month", timeline:"after", remedy_id: 23)
-Action.create(activity:"Do not lift heavy objects for", number: 6, unit:"weeks or until instructed by Doctor", timeline:"after", remedy_id: 23)
+Action.create(activity:"Do not lift heavy objects for", number: 6, unit:"weeks", timeline:"after", remedy_id: 23)
 Action.create(activity:"Remove dressings", number: 48, unit:"hours", timeline:"after", remedy_id: 23)
 Action.create(activity:"No soaking in tub/swimming for", number: 2, unit:"weeks", timeline:"after", remedy_id: 23)
 Action.create(activity:"It may be helpful to sleep in a recliner for", number: 1, unit:"week", timeline:"after", remedy_id: 23)
