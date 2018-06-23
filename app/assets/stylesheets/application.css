@@ -14,6 +14,71 @@
  *= require_tree .
  *= require_self
  */
-.w3-container {
-	color: black;
+
+
+ .card {
+	 margin-left: 30%;
+	 margin-right: 30%;
+
+ }
+
+.container {
+	margin-left: : 22%;
+}
+
+.row{
+	padding-bottom: 9px;
+}
+
+label{
+	font-size: 25px;
+	font-family: 'Suranna', serif;
+}
+.btn-primary{
+	margin-bottom: -10px;
+}
+
+p.alert {
+	padding: 5px;
+}
+#schedule{
+	text-align: center;
+	font-family: 'Vollkorn SC', serif;
+	font-size: 75px;
+	padding-bottom: 0px;
+}
+
+#email {
+	font-family: 'Cormorant Upright', serif;
+	font: "red";
+	text-align: center;
+}
+
+#hospital {
+	border-style: solid;
+	border-color: red;
+	float: left;
+}
+.w3-card-4 {
+	margin-left: 5px;
+}
+
+.TLG {
+	margin-left: 25px;
+	margin-top: 1em;
+}
+
+#bigpicture {
+	size: 500x450;
+}
+
+#logo {
+ display: flex;
+ justify-content: center;
+}
+
+.caption {
+margin-left: 14px;
+margin-bottom: 20px;
+
 }
