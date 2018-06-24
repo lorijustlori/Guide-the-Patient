@@ -1,82 +1,167 @@
-
 <body>
-<% if user_signed_in? %>
-  <h4>Patient: <%= @procedure.patient.first_name %> <%= @procedure.patient.last_name %></h4>
-<% end %>
+	<div class="admin">
+	<% if user_signed_in? %>
+  	<h4>Patient: <%= @procedure.patient.first_name %> <%= @procedure.patient.last_name %></h4>
+	<% end %>
 
 <p>
   <strong>Physician: </strong> <%= @procedure.physician.first_name %> <%= @procedure.physician.last_name %> <br>
 
-  <strong>Surgery Date/Time: </strong><%= @procedure.start_at.strftime("%m/%d/%Y at %I:%M%p") %>
+  <u><strong>Surgery Date/Time: </strong><%= @procedure.start_at.strftime("%m/%d/%Y at %I:%M%p") %></u>
 </p>
-
-
-
-
-    	<div class="row">
-  <div class="col-md-2">
-    <div class="thumbnail1">
-        <%= image_tag 'TLG', alt: "Logo", style: "width:100%" %>
-        <div class="caption">
-          <p><strong>Hospital: </strong> <%= @procedure.physician.hospital.name %> <br>
-  <strong>Address: </strong> <%= @procedure.physician.hospital.address %>, <%= @procedure.physician.hospital.city %> <%= @procedure.physician.hospital.state %><br>
-  <a href= "https://goo.gl/maps/pr1GVkZiJU52">Google</a></p>
-        </div>
-      </a>
-    </div>
-  </div>
-  <div class="col-md-7">
-    <div class="thumbnail2">
-        <%= image_tag 'rotatorcuffrepair', alt: "Rotator Cuff Repair", style: "width:100%" %>
-        <div class="caption">
-          <p>Lorem ipsum...</p>
-        </div>
-      </a>
-    </div>
-  </div>
-  <div class="col-md-3">
-    <div class="thumbnail3">
-      <a href="#">
-        
-          <p>Lorem ipsum...</p>
-        </div>
-      </a>
-    </div>
-  </div>
 </div>
+
+<!-- *******Here starts the top half of the page******* -->
+
+<div class="top-half">
+	<div class="row-left-block">
+		<div class="top-left">
+			<div class="row-logo">
+				<%= image_tag 'TLG', alt: "Logo", style: "width:100%" %>
+			</div>
+			<br>
+			<div class="row-hospital">
+				<b><%= @procedure.physician.hospital.name %></b><br>
+				<%= @procedure.physician.hospital.address %>, <%= @procedure.physician.hospital.city %> <%= @procedure.physician.hospital.state %><br>
+  						<a href= "https://goo.gl/maps/pr1GVkZiJU52">Click here for directions</a></p>
+  						<br>
+			</div>
+		</div>
+
+		<div class="description">
+			<% if @procedure.remedy_id == 287 %>
+         <b><%= "Knee Ligament Repair Surgery" %></b><br>
+         <ul>
+         <%= "*Reattachment or reconstruction of the torn ligament by using a portion (graft) of the patellar tendon (that connects the kneecap to the tibia), the hamstring tendon (from the back of the thigh), or other autografts." %><br>
+         <%= "*The tendon graft may come from the person (autograft) or from an organ donor (allograft)." %>
+       </ul>
+      <% elsif @procedure.remedy_id == 23 %>
+        <b><%= "Rotor Cuff Repair" %></b><br>
+        <ul>
+        <%= "*The tendons are re-attached to the bone." %><br>
+        <%= "*Small rivets (called suture anchors) are often used to help attach the tendon to the bone. The suture anchors can be made of metal or material that dissolves over time, and do not need to be removed." %><br>
+        <%= "*Sutures (stitches) are attached to the anchors, which tie the tendon back to the bone." %>
+      </ul>
+      <% else %>
+        <%= "*Please input either procedure code '23420' or '27407' on the surgical scheduling screen to see demo references to surgical descriptions." %>
+      <% end %>
+		</div>
+	</div>
+
+
+	<div class="row-right-block">
+		<div class="picture-logic">
+			<% if @procedure.remedy_id == 287 %>
+        <%= image_tag 'rotatorcuffrepair', alt: "Rotator Cuff Repair", style: "width:100%" %>
+      <% elsif @procedure.remedy_id == 23 %>
+        <%= image_tag 'knee', alt: "Knee Surgery", style: "width:100%" %>
+      <% else %>
+        <%= image_tag 'Skeleton', alt: "Skeletal System", style: "width:100%" %>
+      <% end %>
+		</div>
+	</div>
+</div>
+
+<!-- *******Top Half of Page Ends Here******* -->
+
+
+
+<!-- 
+*******W3School Tabs******* -->
 
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    padding-left: 12em;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+.clickhere {
+	padding-left: 12em;
+}
+
+/* Fading effect */
+.tabcontent {
+    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+    padding-left: 12em;
+}
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+</style>
+</head>
 <body>
 
-<div class="w3-container">
-  <h2>Click on tabs below for your reminders.</h2>
+<div class="clickhere">
+<p>Click on the buttons below for your reminders!</p>
+</div>
 
-  <div class="w3-row">
-    <a href="javascript:void(0)" onclick="openTodo(event, 'Pre-Operative');">
-      <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Pre-Operative</div>
-    </a>
-    <a href="javascript:void(0)" onclick="openTodo(event, 'Day Of Surgery');">
-      <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Day Of Surgery</div>
-    </a>
-    <a href="javascript:void(0)" onclick="openTodo(event, 'Post-Operative');">
-      <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Post-Operative</div>
-    </a>
-  </div>
+<div class="tab">
+  <button class="tablinks" onclick="openTodo(event, 'Intro')">Patient Guide</button>
+  <button class="tablinks" onclick="openTodo(event, 'Preop')">Before Surgery</button>
+  <button class="tablinks" onclick="openTodo(event, 'Dayof')">Day of Surgery</button>
+  <button class="tablinks" onclick="openTodo(event, 'Postop')">After Surgery</button>
+</div>
 
-  <div id="Pre-Operative" class="w3-container todo" style="display:none">
-    Below is a list of things that will help you to organize your time prior to surgery.<br>  
+<div id="Intro" class="tabcontent">
+  <h3>Patient Guide</h3>
+  <p>Surgery can be a very busy time!<br>  
+    Since you have a lot of things to remember, the tabs included here can help you to stay organized and to keep you on track in preparing for your upcoming procedure.<br>  The lists are suggestions to remind you of things to prepare at home to ensure that your recovery goes more smoothly.</p>
+</div>
+
+<div id="Preop" class="tabcontent">
+  <h3>Before Surgery</h3>
+  <p>Below is a list of things that will help you to organize your time prior to surgery.<br>  
     Your physician's office has given you a list of pre-operative testing to clear you for your procedure.<br>  Please take note of the timelines below.<br>  The list also includes some things to keep in mind to prepare you for recovery.  
     <ul>
 			<%@before_tasks.each do |task| %>
   <div><%= task.action.activity %> <%=task.due_at.strftime("%m/%d/%Y")%></div>
 			<% end %>
-		</ul>
-  </div>
+		</ul></p>
+</div>
 
-  <div id="Day Of Surgery" class="w3-container todo" style="display:none">
-  	Today is the big day!  <br>
+<div id="Dayof" class="tabcontent">
+  <h3>Day Of Surgery</h3>
+ Today is the big day!  <br>
   	Remember a few things listed below. <br>
   	No worries, you are in good hands!
   	<ul>
@@ -84,32 +169,31 @@
   <div><%= task.action.activity %></div>
 <% end %>
 </ul>
-  </div>
+</div>
 
-  <div id="Post-Operative" class="w3-container todo" style="display:none">
-   Your physician has given you a list of instructions for after your surgery. <br>
+<div id="Postop" class="tabcontent">
+  <h3>After Surgery</h3>
+  <p>Your physician has given you a list of instructions for after your surgery. <br>
     Keep in mind the points below, but also pay attention your recovery. <br>
   	<ul>
 <%@after_tasks.each do |task| %>
   <div><%= task.action.activity %> <%= task.action.number %> <%= task.action.unit %> <%= task.action.timeline %></div>
-<% end %>
-  </div>
+<% end %></p>
 </div>
 
 <script>
 function openTodo(evt, cityName) {
-  var i, x, tablinks;
-  x = document.getElementsByClassName("city");
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < x.length; i++) {
-     tablinks[i].className = tablinks[i].className.replace(" w3-border-green", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.firstElementChild.className += " w3-border-green";
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
 }
 </script>
-
 </body>

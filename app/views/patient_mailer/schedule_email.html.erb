@@ -1,15 +1,19 @@
-<h1>Welcome to your schedule guide.</h1>
+<h1>Welcome to your surgery schedule guide.</h1>
 
 Hello <%= @patient.first_name %> <%= @patient.last_name %>
 
 <p>
-  We would like to make your exprience as comfortable and stress-free as possible.<br>
-  Please click on <%= link_to "This Link", @procedure %> for your guide that describes your surgery and things to do before and after your procedure.
+  We would like to make your exprience as stress-free as possible.<br>
+  Please read through the information included here.  It will give you a high-level overview of things to do starting now until the day that you see your surgeon for your post-operative appointment.
 </p>
 
 <p>
-  Please read through the information and take note of the contact information included.
+  You can send this link to anyone that may be helping you to keep track of your schedule.  
 </p>
 
-<p>See you on the other side!</p>
+<p>
+Please click on <%= link_to "This Link", @procedure %> for your guide for a description of your surgery and things to do before and after your procedure.
+</p>
+
+<p>We wish you well and will see you soon!</p>
 <p>Guide The Patient</p>
