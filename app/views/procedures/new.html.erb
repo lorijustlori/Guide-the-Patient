@@ -1,8 +1,9 @@
 <body class="schedule">
-<h1>Surgery Scheduling</h1>
+<h1 id="schedule">Surgery Scheduling</h1>
 
 <%= form_with(url: procedures_url, local: true) do %>
 
+<div class="container">
   <div class="row">
     <div class="form-group col-md">
       <%= label_tag("procedure[patient_id]", "Patient") %>
@@ -107,5 +108,6 @@
   <div class="actions">
     <%= submit_tag "Submit", class: "btn btn-primary" %>
   </div>
+</div>
 <% end %>
 </body>
