@@ -31,13 +31,13 @@
 
 		<div class="description">
 			<% if @procedure.remedy_id == 287 %>
-         <b><%= "Knee Ligament Repair Surgery" %></b><br>
+         <b><u><%= "Knee Ligament Repair Surgery" %></u></b><br>
          <ul>
          <%= "*Reattachment or reconstruction of the torn ligament by using a portion (graft) of the patellar tendon (that connects the kneecap to the tibia), the hamstring tendon (from the back of the thigh), or other autografts." %><br>
          <%= "*The tendon graft may come from the person (autograft) or from an organ donor (allograft)." %>
        </ul>
       <% elsif @procedure.remedy_id == 23 %>
-        <b><%= "Rotor Cuff Repair" %></b><br>
+        <b><u><%= "Rotor Cuff Repair" %></u></b><br>
         <ul>
         <%= "*The tendons are re-attached to the bone." %><br>
         <%= "*Small rivets (called suture anchors) are often used to help attach the tendon to the bone. The suture anchors can be made of metal or material that dissolves over time, and do not need to be removed." %><br>
@@ -57,7 +57,7 @@
       <% elsif @procedure.remedy_id == 23 %>
         <%= image_tag 'knee', alt: "Knee Surgery", style: "width:100%" %>
       <% else %>
-        <%= image_tag 'Skeleton', alt: "Skeletal System", style: "width:100%" %>
+        <%= image_tag 'skeleton2', alt: "Skeletal System", style: "width:100%" %>
       <% end %>
 		</div>
 	</div>
@@ -78,7 +78,7 @@ body {font-family: Arial;}
     overflow: hidden;
     border: 1px solid #ccc;
     background-color: #f1f1f1;
-    padding-left: 12em;
+    padding-left: 18em;
 }
 
 /* Style the buttons inside the tab */
@@ -113,13 +113,15 @@ body {font-family: Arial;}
 
 .clickhere {
 	padding-left: 12em;
+  font-size: 25px;
 }
 
 /* Fading effect */
 .tabcontent {
     animation: fadeEffect 1s; /* Fading effect takes 1 second */
-    padding-left: 12em;
+    padding-left: 15em;
 }
+
 
 /* Go from zero to full opacity */
 @keyframes fadeEffect {
@@ -131,7 +133,7 @@ body {font-family: Arial;}
 <body>
 
 <div class="clickhere">
-<p>Click on the buttons below for your reminders!</p>
+<p><b><u>Click on the tabs below for your reminders!</u></b></p>
 </div>
 
 <div class="tab">
@@ -142,42 +144,43 @@ body {font-family: Arial;}
 </div>
 
 <div id="Intro" class="tabcontent">
-  <h3>Patient Guide</h3>
-  <p>Surgery can be a very busy time!<br>  
-    Since you have a lot of things to remember, the tabs included here can help you to stay organized and to keep you on track in preparing for your upcoming procedure.<br>  The lists are suggestions to remind you of things to prepare at home to ensure that your recovery goes more smoothly.</p>
+  <h3><b><u>Patient Guide</u></b></h3>
+  <p>Surgery can be a very busy and stressful time!<br>  
+    Since you have a lot of things to remember, the tabs included here can help you to stay organized and to keep you on track in preparing for your upcoming procedure.<br>  These lists are suggestions to prepare things at home so that you can focus on a smooth recovery.</p>
 </div>
 
 <div id="Preop" class="tabcontent">
-  <h3>Before Surgery</h3>
+  <h3><b><u>Before Surgery</u></b></h3>
   <p>Below is a list of things that will help you to organize your time prior to surgery.<br>  
     Your physician's office has given you a list of pre-operative testing to clear you for your procedure.<br>  Please take note of the timelines below.<br>  The list also includes some things to keep in mind to prepare you for recovery.  
     <ul>
 			<%@before_tasks.each do |task| %>
-  <div><%= task.action.activity %> <%=task.due_at.strftime("%m/%d/%Y")%></div>
+  <div><%= task.action.activity %> : <%=task.due_at.strftime("%m/%d/%Y")%></div>
 			<% end %>
 		</ul></p>
 </div>
 
 <div id="Dayof" class="tabcontent">
-  <h3>Day Of Surgery</h3>
+  <h3><b><u>Day Of Surgery</u></b></h3>
  Today is the big day!  <br>
   	Remember a few things listed below. <br>
   	No worries, you are in good hands!
   	<ul>
 <%@day_of_tasks.each do |task| %>
-  <div><%= task.action.activity %></div>
+  <div><%= task.action.activity %>.</div>
 <% end %>
 </ul>
 </div>
 
 <div id="Postop" class="tabcontent">
-  <h3>After Surgery</h3>
+  <h3><b><u>After Surgery</u></b></h3>
   <p>Your physician has given you a list of instructions for after your surgery. <br>
-    Keep in mind the points below, but also pay attention your recovery. <br>
+    Keep in mind the points below, and pay attention your recovery. <br>
   	<ul>
 <%@after_tasks.each do |task| %>
-  <div><%= task.action.activity %> <%= task.action.number %> <%= task.action.unit %> <%= task.action.timeline %></div>
+  <div><%= task.action.activity %> <%= task.action.number %> <%= task.action.unit %> <%= task.action.timeline %> surgery.</div>
 <% end %></p>
+</ul>
 </div>
 
 <script>
