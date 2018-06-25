@@ -6,7 +6,9 @@
 <div class="container">
   <div class="row">
     <div class="form-group col-md">
+      <div class="sch">
       <%= label_tag("procedure[patient_id]", "Patient") %>
+    </div>
       <%= select_tag(
           "procedure[patient_id]",
           options_for_select(
@@ -18,7 +20,9 @@
   </div>
   <div class="row">
     <div class="form-group col-md-6">
+      <div class="sch">
       <%= label_tag("patient[address]", "Address") %>
+    </div>
       <%= text_field_tag(
           "patient[address]",
           nil,
@@ -27,7 +31,9 @@
       %>
     </div>
     <div class="form-group col-md-4">
+      <div class="sch">
       <%= label_tag("patient[city]", "City") %>
+    </div>
       <%= text_field_tag(
           "patient[city]",
           nil,
@@ -36,7 +42,9 @@
       %>
     </div>
     <div class="form-group col-md-2">
+      <div class="sch">
       <%= label_tag("patient[state]", "State") %>
+    </div>
       <%= text_field_tag(
           "patient[state]",
           nil,
@@ -45,7 +53,9 @@
       %>
     </div>
     <div class="form-group col-md-6">
+      <div class="sch">
       <%= label_tag("patient[phone]", "Phone") %>
+    </div>
       <%= text_field_tag(
           "patient[phone]",
           nil,
@@ -54,7 +64,9 @@
       %>
     </div>
     <div class="form-group col-md-6">
+      <div class="sch">
       <%= label_tag("patient[email]", "Email") %>
+    </div>
       <%= text_field_tag(
           "patient[email]",
           nil,
@@ -65,7 +77,9 @@
   </div>
   <div class="row">
     <div class="form-group col-md">
+      <div class="sch">
       <%= label_tag("procedure[ailment_id]", "Diagnosis") %>
+    </div>
       <%= select_tag(
           "procedure[ailment_id]",
           options_for_select(
@@ -77,7 +91,9 @@
   </div>
   <div class="row">
     <div class="form-group col-md">
+      <div class="sch">
       <%= label_tag("procedure[remedy_id]", "Procedure") %>
+    </div>
       <%= select_tag(
           "procedure[remedy_id]",
           options_for_select(
@@ -89,7 +105,9 @@
   </div>
   <div class="row">
     <div class="form-group col-md">
+      <div class="sch">
       <%= label_tag("procedure[physician_id]", "Physician") %>
+    </div>
       <%= select_tag(
           "procedure[physician_id]",
           options_for_select(
@@ -101,7 +119,9 @@
   </div>
   <div class="row">
     <div class="form-group col-md">
+      <div class="sch">
       <%= label_tag("procedure[start_at]", "Start") %>
+    </div>
       <%= datetime_field_tag("procedure[start_at]", nil, class: "form-control") %>
     </div>
   </div>
