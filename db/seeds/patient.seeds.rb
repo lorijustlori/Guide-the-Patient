@@ -14,4 +14,4 @@ Patient.delete_all
   puts "#{Patient.count} patients"
 end
 
-Patient.create(medical_record_number:"121-22-3214", first_name:"Greg", last_name: "DesVallons", address:"142 Shoulder Street", city:"Sunrise", state:"FL", phone:"9549544504", email:"gregsthebest@greg.com")
+Patient.create(medical_record_number:"121-22-3214", first_name:"Greg", last_name: "DesV", address:"142 Shoulder Street", city:"Sunrise", state:"FL", phone:"9549544504", email:"tlgsportsmed@gmail.com")
