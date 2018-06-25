@@ -129,7 +129,7 @@ input:checked + label {
 .row-left-block {
 	float: left;
 	width: 30%;
-	padding-left: 3em;
+	padding-left: 8em;
 }
 
 .admin {
@@ -165,7 +165,7 @@ input:checked + label {
 .row-right-block {
 	float: right;
 	width: 70%;
-	padding-left: 20em;
+	padding-left: 35em;
 }
 .picture-logic {
 	width: 550px;
