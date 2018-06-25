@@ -15,10 +15,6 @@
  *= require_self
  */
 
- body {
-  background-color: #c8f7f1 !important;
-  font-family: Verdana, Geneva, sans-serif;
- }
 
 .w3-container {
 	color: black;
@@ -131,9 +127,8 @@ input:checked + label {
 }
 
 
-
 .top-half {
-	display: inline-block;
+	display: inline-flex;
 	height: 500px;
 	width: 100%;
 }
