@@ -59,10 +59,6 @@ section {
   border-top: 1px solid #ddd;
 }
 
-input {
-  display: none;
-}
-
 label {
   display: inline-block;
   margin: 0 0 -1px;
@@ -274,7 +270,7 @@ font-weight: bold;
 
 b.desc {
 	 color: #99004C;
-	 padding: 20%;
+	 padding: 13%;
 	 font-family: 'Cormorant Garamond', serif;
 	 font-size: 30px;
  }
