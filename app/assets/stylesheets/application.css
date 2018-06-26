@@ -124,7 +124,7 @@ input:checked + label {
 
 .row-left-block {
 	float: left;
-	width: 30%;
+	width: 41%;
 	padding-left: 8em;
 }
 
@@ -146,6 +146,7 @@ input:checked + label {
 	float: right;
 	width: 50%;
 	padding-left: 3em;
+  padding-top: 8em;
 }
 
 .description {
@@ -160,8 +161,8 @@ input:checked + label {
 
 .row-right-block {
 	float: right;
-	width: 70%;
-	padding-left: 35em;
+	width: 54%;
+	padding-left: 14em;
 }
 .picture-logic {
 	width: 550px;
@@ -250,22 +251,41 @@ p.alert {
 	padding-bottom: 2%;
 	margin-top: -2%;
 }
+
 /*-----------------------Patient View-------------------------------------------------
-*/.adinfo{
+.row-hospital {
+  font-size: 20px;
+}
+
+.bullets {
+  font-size: 20px;
+}
+.adinfo{
+
 	text-align: center;
 }
 
 #person {
-	font-size: 25px;
+	font-size: 30px;
 font-family: 'Cormorant Garamond', serif;
 font-weight: bold;
+}
+
+.doc{
+  font-size: 20px;
 }
 
 .clickhere{
 	text-align: center;
 	font-family: 'Crimson Text', serif;
-	font-size: 25px;
-	padding: 20px 0;
+	font-size: 30px;
+	padding: 52px 0;
+}
+
+.clickhere {
+  padding-left: 0em;
+  font-size: 30px;
+  padding-top: 9%;
 }
 
 b.desc {
@@ -310,16 +330,14 @@ b.desc {
     border-top: none;
 }
 
-.clickhere {
-  padding-left: 0em;
-  font-size: 25px;
-}
+
 
 /* Fading effect */
 .tabcontent {
     animation: fadeEffect 1s; /* Fading effect takes 1 second */
-    padding-left: 36em;
+    padding-left: 8em;
     background-color: #dee2e6;
+    font-size: 30px;
   }
 
 /* Style the tab */
