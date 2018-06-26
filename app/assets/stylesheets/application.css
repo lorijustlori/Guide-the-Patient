@@ -251,7 +251,8 @@ p.alert {
 	padding-bottom: 2%;
 	margin-top: -2%;
 }
------------------------Patient View-------------------------------------------------
+
+/*-----------------------Patient View-------------------------------------------------
 .row-hospital {
   font-size: 20px;
 }
@@ -259,8 +260,8 @@ p.alert {
 .bullets {
   font-size: 20px;
 }
-
 .adinfo{
+
 	text-align: center;
 }
 

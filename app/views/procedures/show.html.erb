@@ -72,31 +72,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 
-/* Style the tab */
-.tab {
-    overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #b9e4e2;
-    padding-left: 12em;
-		font-family: 'Vollkorn SC', serif;
-}
 
-
-
-
-
-
-
-
-
-
-
-
-/* Go from zero to full opacity */
-@keyframes fadeEffect {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
 </style>
 </head>
 <body>
@@ -134,11 +110,12 @@
         <%= @procedure.physician.hospital.address %>, <%= @procedure.physician.hospital.city %> <%= @procedure.physician.hospital.state %><br><a href= "https://goo.gl/maps/pr1GVkZiJU52">Click here for directions</a></p><br>
   	Remember a few things listed below. <br>
   	No worries, you are in good hands!
-  	<ul><br />
-<%@day_of_tasks.each do |task| %>
-  <div><li><%= task.action.activity %>.</li></div>
-<% end %>
-</ul>
+  	<ul><br/>
+    <%@day_of_tasks.each do |task| %>
+      <div><li><%= task.action.activity %>.</li></div>
+      <% end %>
+    </ul>
+
 </div>
 
 
