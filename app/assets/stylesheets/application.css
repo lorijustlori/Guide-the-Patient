@@ -152,7 +152,7 @@ input:checked + label {
 	float: left;
 	padding-left: 2em;
 	padding-top: 2em;
-	height: 220px
+	height: 220px;
 	width: 100%;
 	margin-top: 15%;
 }
@@ -235,7 +235,6 @@ input:checked + label {
 	margin-bottom: -17px;
 }
 
-}
 .btn-primary{
 	margin-bottom: -10px;
 }
