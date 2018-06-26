@@ -31,10 +31,10 @@
 
 		<div class="description">
 			<% if @procedure.remedy_id == 287 %>
-         <b class="desc"><%= "Knee Ligament Repair Surgery" %></b><br>
+         <b class="desc"><%= "Knee Ligament Repair" %></b><br>
          <ul>
-         <%= "*Reattachment or reconstruction of the torn ligament by using a portion (graft) of the patellar tendon (that connects the kneecap to the tibia), the hamstring tendon (from the back of the thigh), or other autografts." %><br>
-         <%= "*The tendon graft may come from the person (autograft) or from an organ donor (allograft)." %>
+         <li><%= "Reattachment or reconstruction of the torn ligament by using a portion (graft) of the patellar tendon (that connects the kneecap to the tibia), the hamstring tendon (from the back of the thigh), or other autografts." %></li><br>
+        <li><%= "The tendon graft may come from the person (autograft) or from an organ donor (allograft)." %></li>
        </ul>
       <% elsif @procedure.remedy_id == 23 %>
         <b class="desc"><%= "Rotor Cuff Repair" %></b><br>
@@ -113,7 +113,7 @@
 }
 
 .clickhere {
-	padding-left: 12em;
+	padding-left: 0em;
   font-size: 25px;
 }
 
@@ -154,7 +154,7 @@
 <div id="Preop" class="tabcontent">
   <p>Below is a list of things that will help you to organize your time prior to surgery.<br>
     Your physician's office has given you a list of pre-operative testing to clear you for your procedure.<br>  Please take note of the timelines below.<br>  The list also includes some things to keep in mind to prepare you for recovery.
-    <ul>
+    <ul class="list">
 			<%@before_tasks.each do |task| %>
   <div><%= task.action.activity %> : <%=task.due_at.strftime("%m/%d/%Y")%></div>
 			<% end %>
@@ -179,7 +179,7 @@
 <div id="Postop" class="tabcontent">
   <p>Your physician has given you a list of instructions for after your surgery. <br>
     Keep in mind the points below and pay close attention your recovery. <br>
-  	<ul>
+  	<ul class="list">
 <%@after_tasks.each do |task| %>
   <div><%= task.action.activity %> <%= task.action.number %> <%= task.action.unit %> <%= task.action.timeline %> surgery.</div>
 <% end %></p>
