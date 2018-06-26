@@ -72,31 +72,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 
-/* Style the tab */
-.tab {
-    overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #b9e4e2;
-    padding-left: 12em;
-		font-family: 'Vollkorn SC', serif;
-}
 
-
-
-
-
-
-
-
-
-
-
-
-/* Go from zero to full opacity */
-@keyframes fadeEffect {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
 </style>
 </head>
 <body>
@@ -122,7 +98,7 @@
     Your physician's office has given you a list of pre-operative testing to clear you for your procedure.<br>  Please take note of the timelines below.<br>  The list also includes some things to keep in mind to prepare you for recovery.
     <ul class="list">
 			<%@before_tasks.each do |task| %>
-  <div><%= task.action.activity %> : <%=task.due_at.strftime("%m/%d/%Y")%></div>
+  <div><li><%= task.action.activity %> : <%=task.due_at.strftime("%m/%d/%Y")%></li></div>
 			<% end %>
 		</ul></p>
 </div>
@@ -135,10 +111,10 @@
   	Remember a few things listed below. <br>
   	No worries, you are in good hands!
   	<ul>
-<%@day_of_tasks.each do |task| %>
-  <div><%= task.action.activity %>.</div>
-<% end %>
-</ul>
+    <%@day_of_tasks.each do |task| %>
+      <div><li><%= task.action.activity %>.</li></div>
+      <% end %>
+    </ul>
 </div>
 
 
@@ -147,7 +123,7 @@
     Keep in mind the points below and pay close attention your recovery. <br>
   	<ul class="list">
 <%@after_tasks.each do |task| %>
-  <div><%= task.action.activity %> <%= task.action.number %> <%= task.action.unit %> <%= task.action.timeline %> surgery.</div>
+  <div><li><%= task.action.activity %> <%= task.action.number %> <%= task.action.unit %> <%= task.action.timeline %> surgery.</li></div>
 <% end %></p>
 </ul>
 </div>
