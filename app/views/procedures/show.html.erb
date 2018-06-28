@@ -5,7 +5,7 @@
 	<% end %>
 
 
-<p>
+<p class="doc">
   <strong>Physician: </strong> <%= @procedure.physician.first_name %> <%= @procedure.physician.last_name %> <br>
 
   <u><strong>Surgery Date/Time: </strong><%= @procedure.start_at.strftime("%m/%d/%Y at %I:%M%p") %></u>
@@ -18,7 +18,7 @@
 	<div class="row-left-block">
 		<div class="top-left">
 			<div class="row-logo">
-				<%= image_tag 'TLG', alt: "Logo", style: "width:100%" %>
+				<%= image_tag 'TLG', alt: "Logo", style: "width:123%" %>
 			</div>
 			<br>
 			<div class="row-hospital">
@@ -31,14 +31,14 @@
 
 		<div class="description">
 			<% if @procedure.remedy_id == 287 %>
-         <b class="desc"><%= "Knee Ligament Repair" %></b><br>
-         <ul>
+         <b class="desc"><u><%= "Knee Ligament Repair" %></u></b><br>
+         <ul class="bullets">
          <li><%= "Reattachment or reconstruction of the torn ligament by using a portion (graft) of the patellar tendon (that connects the kneecap to the tibia), the hamstring tendon (from the back of the thigh), or other autografts." %></li><br>
         <li><%= "The tendon graft may come from the person (autograft) or from an organ donor (allograft)." %></li>
        </ul>
       <% elsif @procedure.remedy_id == 23 %>
-        <b class="desc"><%= "Rotator Cuff Repair" %></b><br>
-        <ul>
+        <b class="desc"><u><%= "Rotator Cuff Repair" %></u></b><br>
+        <ul class="bullets">
         <li><%= "Small rivets (called suture anchors) are often used to help attach the tendon to the bone. The suture anchors can be made of metal or material that dissolves over time, and do not need to be removed." %></li>
         <li><%= "Sutures (stitches) are attached to the anchors, which tie the tendon back to the bone." %></li>
 				<li><%= "The tendons are re-attached to the bone." %></li>
@@ -53,7 +53,11 @@
 	<div class="row-right-block">
 		<div class="picture-logic">
 			<% if @procedure.remedy_id == 23 %>
+<<<<<<< HEAD
         <%= image_tag 'rotatorcuffrepair', alt: "Rotator Cuff Repair", style: "width:100%;" %>
+=======
+        <%= image_tag 'rotatorcuffrepair', alt: "Rotator Cuff Repair", style: "width:120%" %>
+>>>>>>> 906b761995de7bd85514b7c39028b74f21f27a63
       <% elsif @procedure.remedy_id == 287 %>
         <%= image_tag 'knee', alt: "Knee Surgery", style: "width:100%;" %>
       <% else %>
@@ -107,14 +111,15 @@
  Today is the big day!  <br><br>
  Your surgery is at: </strong><%= @procedure.start_at.strftime("%m/%d/%Y at %I:%M%p") %><br>
  <b><%= @procedure.physician.hospital.name %></b><br>
-        <%= @procedure.physician.hospital.address %>, <%= @procedure.physician.hospital.city %> <%= @procedure.physician.hospital.state %><br><br>
+        <%= @procedure.physician.hospital.address %>, <%= @procedure.physician.hospital.city %> <%= @procedure.physician.hospital.state %><br><a href= "https://goo.gl/maps/pr1GVkZiJU52">Click here for directions</a></p><br>
   	Remember a few things listed below. <br>
   	No worries, you are in good hands!
-  	<ul>
+  	<ul><br/>
     <%@day_of_tasks.each do |task| %>
       <div><li><%= task.action.activity %>.</li></div>
       <% end %>
     </ul>
+
 </div>
 
 
